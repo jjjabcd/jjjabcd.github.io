@@ -1,4 +1,6 @@
-# Jin Hyuk Kim
+---
+title: "Jin Hyuk Kim"
+---
 
 [Homepage](https://www.notion.so/Jin-s-Study-194ee3c1d96b80a2b0cce212cc8d597e) | [Google Scholar](https://scholar.google.co.kr/citations?user=8ly72dcAAAAJ&hl=en) | [GitHub](https://github.com/jjjabcd)
 
