@@ -1,4 +1,4 @@
 ---
 layout: redirect
-redirect_to: /cv/cv.html
+redirect_to: /cv/CV.html
 ---
