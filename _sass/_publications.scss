@@ -34,6 +34,9 @@
 
   .abbr {
     abbr {
+      display: inline-block !important;
+      white-space: normal !important;
+      word-break: break-word !important;
       border: 1px solid #007bff !important;
       background: transparent !important;
       color: #007bff !important;
@@ -41,6 +44,8 @@
       padding: 2px 8px !important;
       font-size: 0.7rem !important;
       text-transform: uppercase;
+      text-align: center;
+      line-height: 1.2;
     }
   }
 
