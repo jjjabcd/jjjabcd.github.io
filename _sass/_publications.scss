@@ -1,188 +1,67 @@
-/*******************************************************************************
- * Publication and bibliography styles
- ******************************************************************************/
+.category {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 8px;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  font-weight: 400;
+  font-size: 1.5rem;
+  color: #fff;
+}
 
-@use "variables" as v;
+.periodical {
+  display: flex !important;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.entry-year {
+  font-weight: 500;
+}
 
 .publications {
-  margin-top: 2rem;
+  .btn-outline-primary {
+    border-radius: 20px;
+    padding: 5px 15px;
+    font-size: 0.9rem;
+    border: 1px solid #4a4a4a !important;
+    color: #888 !important;
 
-  h1 {
-    color: var(--global-theme-color);
-    font-size: 2rem;
-    text-align: center;
-    margin-top: 1em;
-    margin-bottom: 1em;
-  }
-
-  h2 {
-    margin-bottom: 1rem;
-
-    span {
-      font-size: 1.5rem;
+    &:hover {
+      color: #007bff !important;
+      border-color: #007bff !important;
     }
   }
 
-  h2.bibliography {
-    color: var(--global-divider-color);
-    border-top: 1px solid var(--global-divider-color);
-    padding-top: 1rem;
-    margin-top: 2rem;
-    text-align: right;
+  .abbr {
+    abbr {
+      border: 1px solid #007bff !important;
+      background: transparent !important;
+      color: #007bff !important;
+      border-radius: 5px !important;
+      padding: 2px 8px !important;
+      font-size: 0.7rem !important;
+      text-transform: uppercase;
+    }
   }
 
-  ol.bibliography {
-    list-style: none;
-    padding: 0;
-    margin-top: 0;
+  .links {
+    .btn {
+      border: 1px solid #fff !important;
+      color: #fff !important;
+      background: transparent !important;
+      text-transform: uppercase;
+      font-size: 0.75rem;
+      padding: 2px 10px;
+      margin-right: 5px;
 
-    li {
-      margin-bottom: 1rem;
-
-      .preview {
-        display: inline-block;
+      &:hover {
+        background: rgba(255, 255, 255, 0.1) !important;
       }
-
-      .abbr {
-        margin-bottom: 0.5rem;
-
-        abbr {
-          display: inline-block;
-          background-color: var(--global-theme-color);
-          margin-bottom: 0.5rem;
-          color: var(--global-card-bg-color) !important;
-
-          a {
-            color: white;
-
-            &:hover {
-              text-decoration: none;
-            }
-          }
-        }
-
-        .award {
-          color: var(--global-theme-color) !important;
-          border: 1px solid var(--global-theme-color);
-        }
-      }
-
-      .title {
-        font-weight: bolder;
-      }
-
-      .author {
-        a {
-          border-bottom: 1px dashed var(--global-theme-color);
-
-          &:hover {
-            border-bottom-style: solid;
-            text-decoration: none;
-          }
-        }
-
-        > em {
-          border-bottom: 1px solid;
-          font-style: normal;
-        }
-
-        > span.more-authors {
-          color: var(--global-text-color-light);
-          border-bottom: 1px dashed var(--global-text-color-light);
-          cursor: pointer;
-
-          &:hover {
-            color: var(--global-text-color);
-            border-bottom: 1px dashed var(--global-text-color);
-          }
-        }
-      }
-
-      .links {
-        a.btn {
-          color: var(--global-text-color);
-          border: 1px solid var(--global-text-color);
-          padding-left: 1rem;
-          padding-right: 1rem;
-          padding-top: 0.25rem;
-          padding-bottom: 0.25rem;
-          margin-left: 0;
-
-          &:hover {
-            color: var(--global-theme-color);
-            border-color: var(--global-theme-color);
-          }
-        }
-        a.award.btn {
-          border-color: var(--global-highlight-color);
-        }
-      }
-
-      .badges {
-        padding-bottom: 0.5rem;
-        span {
-          display: inline-block;
-          color: v.$black-color;
-          height: 100%;
-          padding-right: 0.5rem;
-          vertical-align: middle;
-
-          &:hover {
-            text-decoration: underline;
-          }
-        }
-      }
-
-      .hidden {
-        font-size: 0.875rem;
-        max-height: 0px;
-        overflow: hidden;
-        text-align: justify;
-        transition-property: 0.15s ease;
-        -moz-transition: 0.15s ease;
-        -ms-transition: 0.15s ease;
-        -o-transition: 0.15s ease;
-        transition: all 0.15s ease;
-
-        p {
-          line-height: 1.4em;
-          margin: 10px;
-        }
-
-        pre {
-          font-size: 1em;
-          line-height: 1.4em;
-          padding: 10px;
-        }
-      }
-
-      .hidden.open {
-        max-height: 100em;
-        transition-property: 0.15s ease;
-        -moz-transition: 0.15s ease;
-        -ms-transition: 0.15s ease;
-        -o-transition: 0.15s ease;
-        transition: all 0.15s ease;
-      }
-
-      div.abstract.hidden {
-        border: dashed 1px var(--global-bg-color);
-      }
-
-      div.abstract.hidden.open {
-        border-color: var(--global-text-color);
-      }
-    }
-    div.award.hidden {
-      border: dashed 1px var(--global-bg-color);
-    }
-    div.award.hidden.open {
-      border-color: var(--global-highlight-color);
     }
   }
 }
 
-.citation,
-.citation-number {
-  color: var(--global-theme-color);
+.publications ol {
+  list-style-type: none !important;
+  padding-left: 0 !important;
 }
