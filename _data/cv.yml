@@ -1,5 +1,5 @@
 cv:
-  name: Albert Einstein
+  name: Jin Hyuk Kim
   label: Scientist
   email: einstein@example.com
   location: Princeton, NJ
@@ -150,9 +150,9 @@ cv:
         summary: "Fluent"
 
     Interests:
-      - name: Physics
-        icon: fa-solid fa-tag
-        keywords: "Quantum Mechanics, Quantum Computing, Quantum Information, Quantum Cryptography, Quantum Communication, Quantum Teleportation"
+      - name: Research Interests
+        icon: fa-solid fa-flask
+        keywords: "AI4Science (Chemistry), Drug Discovery, Multi-modal Representation Learning, Explainable AI, Multi-Objective Optimization, Molecular Generation"
 
     Certificates:
       - name: Machine Learning
