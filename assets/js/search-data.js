@@ -41,17 +41,6 @@ ninja.data = [{
             window.location.href = "/blog/2026/2025-03-19-conda-environment/";
           
         },
-      },{id: "post-cuda",
-        
-          title: "Cuda",
-        
-        description: "",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/blog/2026/cuda/";
-          
-        },
       },{id: "post-pytorch",
         
           title: "Pytorch",
@@ -63,15 +52,15 @@ ninja.data = [{
             window.location.href = "/blog/2026/pytorch/";
           
         },
-      },{id: "post-mlp",
+      },{id: "post-rl",
         
-          title: "Mlp",
+          title: "Rl",
         
         description: "",
         section: "Posts",
         handler: () => {
           
-            window.location.href = "/blog/2026/mlp/";
+            window.location.href = "/blog/2026/rl/";
           
         },
       },{id: "post-cheminformatics-smiles",
