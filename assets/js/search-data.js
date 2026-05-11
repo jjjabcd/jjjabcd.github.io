@@ -38,95 +38,95 @@ ninja.data = [{
         section: "Posts",
         handler: () => {
           
-            window.location.href = "/blog/2026/2025-04-04-cheminformatics-smiles/";
+            window.location.href = "/blog/2026/2025-03-19-conda-environment/";
           
         },
-      },{id: "post-pytorch-입문-cpu-vs-gpu-버전-차이와-cuda-가속-확인하기",
+      },{id: "post-cuda",
         
-          title: "PyTorch 입문: CPU vs GPU 버전 차이와 CUDA 가속 확인하기",
-        
-        description: "PyTorch의 CPU/GPU 버전 차이를 이해하고 CUDA 가속 가능 여부를 확인하는 방법",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/blog/2026/tools-cuda/";
-          
-        },
-      },{id: "post-pytorch-입문-cpu-vs-gpu-버전-차이와-cuda-가속-확인하기",
-        
-          title: "PyTorch 입문: CPU vs GPU 버전 차이와 CUDA 가속 확인하기",
-        
-        description: "PyTorch의 CPU/GPU 버전 차이를 이해하고 CUDA 가속 가능 여부를 확인하는 방법",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/blog/2026/tools-pytorch/";
-          
-        },
-      },{id: "post-multi-layer-perceptron",
-        
-          title: "Multi-Layer Perceptron",
-        
-        description: "Test post for ML/DL.",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/blog/2026/ai-mlp/";
-          
-        },
-      },{id: "post-리눅스-명령어-정리",
-        
-          title: "리눅스 명령어 정리",
-        
-        description: "Linux Commend",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/blog/2025/linux-commend/";
-          
-        },
-      },{id: "post-linux-jupyter",
-        
-          title: "Linux Jupyter",
+          title: "Cuda",
         
         description: "",
         section: "Posts",
         handler: () => {
           
-            window.location.href = "/blog/2025/linux-jupyter/";
+            window.location.href = "/blog/2026/cuda/";
           
         },
-      },{id: "post-conda-가상환경에-라이브러리-설치",
+      },{id: "post-pytorch",
         
-          title: "Conda 가상환경에 라이브러리 설치",
+          title: "Pytorch",
         
-        description: "Miniconda environment 관리",
+        description: "",
         section: "Posts",
         handler: () => {
           
-            window.location.href = "/blog/2025/linux-conda-environment/";
+            window.location.href = "/blog/2026/pytorch/";
           
         },
-      },{id: "post-ubuntu에서-miniconda-설치",
+      },{id: "post-mlp",
         
-          title: "Ubuntu에서 Miniconda 설치",
+          title: "Mlp",
         
-        description: "Miniconda 설치.",
+        description: "",
         section: "Posts",
         handler: () => {
           
-            window.location.href = "/blog/2025/linux-conda-install/";
+            window.location.href = "/blog/2026/mlp/";
           
         },
-      },{id: "post-a-post-with-jupyter-notebook",
+      },{id: "post-cheminformatics-smiles",
         
-          title: "a post with jupyter notebook",
+          title: "Cheminformatics Smiles",
         
-        description: "an example of a blog post with jupyter notebook",
+        description: "",
         section: "Posts",
         handler: () => {
           
-            window.location.href = "/blog/2023/jupyter-notebook/";
+            window.location.href = "/blog/2025/cheminformatics-smiles/";
+          
+        },
+      },{id: "post-commend",
+        
+          title: "Commend",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2025/commend/";
+          
+        },
+      },{id: "post-jupyter",
+        
+          title: "Jupyter",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2025/jupyter/";
+          
+        },
+      },{id: "post-conda-install",
+        
+          title: "Conda Install",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2025/conda-install/";
+          
+        },
+      },{id: "post-multi-objective-latent-space-optimization-of-generative-molecular-design-models",
+        
+          title: "Multi-objective latent space optimization of generative molecular design models",
+        
+        description: "Pareto ranking 기반 weighted retraining을 통한 multi-objective generative molecular design 논문 리뷰",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2025/molso/";
           
         },
       },{id: "books-the-godfather",
