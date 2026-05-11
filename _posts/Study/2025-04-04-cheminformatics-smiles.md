@@ -1,14 +1,13 @@
-﻿---
+﻿---\r\ntoc:\r\n  sidebar: left
 layout: post
 title: "SMILES ?쒓린踰?
 date: 2025-04-04
-categories: [cheminformatics]
+categories: [Study]
 tags:
   - cheminformatics
   - molecular-representation
 description: "Test post for Linux category."
-published: false
----
+---\r\ntoc:\r\n  sidebar: left
 
 ?쒕몢 以??뚯뒪???댁슜?낅땲??
 
@@ -30,7 +29,7 @@ published: false
 
 ??以?SMILES??臾몄옄??湲곕컲?쇰줈 遺꾩옄 援ъ“瑜??쒗쁽?섎뒗 ??쒖쟻???щ㎎?쇰줈, 媛꾨떒???띿뒪?몃줈 ?뷀빀臾쇱쓣 吏곴??곸쑝濡?湲곗닠?????덈떎???μ젏???덈떎.
 
----
+---\r\ntoc:\r\n  sidebar: left
 
 ## ?щ엺???쎄린 ?ъ슫 諛⑹떇 (Human-readable) ??
 ### Name
@@ -39,7 +38,7 @@ published: false
 
 ### Kekul챕
 
-![image.png](../assets/blog/2025-04-04-cheminformatics-smiles/fig1.png)
+![image.png](/assets/blog/2025-04-04-cheminformatics-smiles/fig1.png)
 
 ### Condensed Formula
 
@@ -47,7 +46,7 @@ published: false
 
 ### Bond-line
 
-![image.png](../assets/blog/2025-04-04-cheminformatics-smiles/fig2.png)
+![image.png](/assets/blog/2025-04-04-cheminformatics-smiles/fig2.png)
 
 ## 而댄벂?곗뿉???ъ슜?섎뒗 諛⑹떇 (Computer-readable) ??
 - SMILES(Simplified Molecular Input Line Entropy System)
@@ -80,24 +79,25 @@ SMILES??遺꾩옄援ъ“瑜?string?쇰줈 ?쒗쁽?섎뒗 ?쒓린踰? 遺꾩옄 
 
 ### Ring & Aromaticity
 
-![image.png](../assets/blog/2025-04-04-cheminformatics-smiles/fig3.png)
+![image.png](/assets/blog/2025-04-04-cheminformatics-smiles/fig3.png)
 
 ### Branch
 
-![image.png](../assets/blog/2025-04-04-cheminformatics-smiles/fig4.png)
+![image.png](/assets/blog/2025-04-04-cheminformatics-smiles/fig4.png)
 
 ### Excercise (1/2)
 
-![image.png](../assets/blog/2025-04-04-cheminformatics-smiles/fig5.png)
+![image.png](/assets/blog/2025-04-04-cheminformatics-smiles/fig5.png)
 
 ### Exercise (2/2)
 
-![image.png](../assets/blog/2025-04-04-cheminformatics-smiles/fig6.png)
+![image.png](/assets/blog/2025-04-04-cheminformatics-smiles/fig6.png)
 
 ### [李멸퀬?먮즺]
 
----
+---\r\ntoc:\r\n  sidebar: left
 
 [SMILES?쒓린踰뺤씠?? (SMILES representation ?ㅻ챸 諛??λ떒??](https://process-mining.tistory.com/158)
 
 Weininger, D. (1988). SMILES, a chemical language and information system. 1. Introduction to methodology and encoding rules.혻*Journal of chemical information and computer sciences*,혻*28*(1), 31-36.
+
