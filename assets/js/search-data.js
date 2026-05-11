@@ -107,11 +107,11 @@ ninja.data = [{
             window.location.href = "/blog/2025/molso/";
           
         },
-      },{id: "post-reinforcement-learning-기초-개념-2-algorithm-classification",
+      },{id: "post-reinforcement-learning-기초-개념-2-algorithm-types",
         
-          title: "Reinforcement Learning 기초 개념 (2): Algorithm Classification",
+          title: "Reinforcement Learning 기초 개념 (2): Algorithm Types",
         
-        description: "Reinforcement Learning algorithm의 model-free, model-based, on-policy, off-policy 분류 정리",
+        description: "Reinforcement Learning algorithm의 model-free, model-based, on-policy, off-policy, policy-based, value-based 분류 정리",
         section: "Posts",
         handler: () => {
           
