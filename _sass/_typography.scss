@@ -24,6 +24,8 @@ hr {
 }
 
 table {
+  margin-bottom: 2rem !important;
+
   td,
   th {
     font-size: 1rem;
@@ -33,6 +35,10 @@ table {
   th {
     font-weight: bold;
   }
+}
+
+.table-responsive {
+  margin-bottom: 2rem !important;
 }
 
 a,
@@ -51,6 +57,7 @@ table.table a {
 
 .table-dark {
   background-color: transparent;
+
   &.table-bordered {
     border: 1px solid var(--global-divider-color) !important;
   }

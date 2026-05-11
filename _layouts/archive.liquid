@@ -5,13 +5,26 @@ layout: default
   <header class="post-header">
     {% if page.type == 'categories' %}
       <h1 class="post-title"><i class="fa-solid fa-tag fa-sm"></i> {{ page.title }}</h1>
-      <p class="post-description">an archive of {{ page.collection_name }} in this category</p>
+      <p class="post-description">
+        {% case page.title %}
+          {% when "ML/DL Theory" %}
+            머신러닝 및 딥러닝 기술들에 대한 이론적 배경과 개념을 정리하는 공간입니다.
+          {% when "Paper Review" %}
+            최신 Cheminformatics 및 AI 관련 논문들을 읽고 핵심 내용을 분석하여 기록합니다.
+          {% when "CS" %}
+            원활한 연구와 개발을 위한 OS 설정, 라이브러리 설치 등 전반적인 컴퓨터 과학 지식을 정리합니다.
+          {% when "Cheminformatics" %}
+            화학(Chemistry)과 정보학(Informatics)이 결합된 Cheminformatics 관련 학습 내용을 기록합니다.
+          {% else %}
+            '{{ page.title }}' 카테고리에 분류된 모든 글들을 모아보았습니다.
+        {% endcase %}
+      </p>
     {% elsif page.type == 'year' %}
       <h1 class="post-title"><i class="fa-solid fa-calendar fa-sm"></i> {{ page.date | date: '%Y' }}</h1>
-      <p class="post-description">an archive of {{ page.collection_name }} from this year</p>
+      <p class="post-description">{{ page.date | date: '%Y' }}년에 작성된 소중한 기록들입니다.</p>
     {% elsif page.type == 'tags' %}
       <h1 class="post-title"><i class="fa-solid fa-hashtag fa-sm"></i> {{ page.title }}</h1>
-      <p class="post-description">an archive of {{ page.collection_name }} with this tag</p>
+      <p class="post-description">'{{ page.title }}' 태그와 관련된 글들을 모아보았습니다.</p>
     {% endif %}
   </header>
 

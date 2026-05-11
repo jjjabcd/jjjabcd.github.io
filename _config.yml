@@ -92,7 +92,9 @@ bing_site_verification: # out your bing-site-verification ID (Bing Webmaster)
 # -----------------------------------------------------------------------------
 
 blog_name: Jin's Study Log # blog_name will be displayed in your blog page
-blog_description: Paper Review & Environment Setting & ML/DL Theory Study
+blog_description: >
+  Paper Review & Environment Setting & ML/DL Theory Study <br>
+  카테고리를 통해 비슷한 주제의 글들을 모아볼 수 있습니다.
 permalink: /blog/:year/:title/
 lsi: false # produce an index for related posts
 
@@ -273,7 +275,7 @@ jekyll-archives:
 
 # display_tags: ["formatting", "images", "links", "math", "code", "blockquotes"] # these tags will be displayed on the front page of your blog
 display_tags: []
-display_categories: ["Paper Review", "Environment Setting", "ML/DL Theory", "Study"] # these categories will be displayed on the front page of your blog
+display_categories: ["Paper Review", "CS", "ML/DL Theory", "Cheminformatics"] # these categories will be displayed on the front page of your blog
 
 # -----------------------------------------------------------------------------
 # Jekyll Scholar
