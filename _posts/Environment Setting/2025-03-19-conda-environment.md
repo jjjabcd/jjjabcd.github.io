@@ -1,208 +1,114 @@
-﻿---
+---
 layout: post
-title: "Conda 媛?곹솚寃쎌뿉 ?쇱씠釉뚮윭由??ㅼ튂"
+title: "Conda 가상환경에 라이브러리 설치"
 date: 2025-03-19
 categories: [Environment Setting]
 tags:
   - ubuntu
   - miniconda
-  - environment
-description: "Miniconda environment 愿由?
+description: "Miniconda 가상환경 생성 및 패키지 관리 방법 정리"
 toc:
   sidebar: left
 ---
 
-# Conda 媛?곹솚寃쎌뿉 ?쇱씠釉뚮윭由??ㅼ튂
-
-SSH ?묒냽 ?섍꼍?먯꽌 Conda 媛?곹솚寃??댁뿉???쇱씠釉뚮윭由щ? ?ㅼ튂?섎뒗 湲곕낯?곸씤 紐낅졊?댁? ?ъ슜踰뺤쓣 ?뺣━???덉떆?낅땲?? Conda? pip瑜??쒖슜?섏뿬 ?꾩슂???⑦궎吏?ㅼ쓣 ?ㅼ튂?섍퀬 愿由ы븷 ???덉쑝硫? ?대? ?듯빐 Python 媛쒕컻 ?섍꼍???붿슧 ?⑥쑉?곸쑝濡?援ъ꽦?????덉뒿?덈떎.
+SSH 접속 환경에서 Conda 가상환경 내에 라이브러리를 설치하는 기본적인 명령어와 사용법을 정리한 예시입니다. Conda와 pip를 사용하여 필요한 패키지들을 설치하고 관리할 수 있으며, 이를 통해 Python 개발 환경을 더욱 효율적으로 구성할 수 있습니다.
 
 ## Prerequisite
 
-- [Ubuntu?먯꽌 Miniconda ?ㅼ튂](https://jjjabcd.github.io/github-pages/linux/2025/03/18/linux-conda.html)
+- [Ubuntu에서 Miniconda 설치]({% post_url Environment Setting/2025-03-18-conda-install %})
 
-## Conda 媛?곹솚寃쎌뿉???쇱씠釉뚮윭由??ㅼ튂??
+## Conda 가상환경이란?
 
-Conda 媛?곹솚寃쎌? ?꾨줈?앺듃蹂꾨줈 ?낅┰?곸씤 ?⑦궎吏? Python 踰꾩쟾??愿由ы븷 ???덇쾶 ?댁쨳?덈떎. ?대? ?듯빐 ?쒕줈 ?ㅻⅨ ?꾨줈?앺듃 媛꾩쓽 ?⑦궎吏 異⑸룎 ?놁씠 ?덉젙?곸씤 媛쒕컻 ?섍꼍???좎??????덉뒿?덈떎.
+Conda 가상환경은 프로젝트별로 독립적인 패키지와 Python 버전을 관리할 수 있게 해줍니다. 이를 통해 서로 다른 프로젝트 간의 패키지 충돌 없이 안정적인 개발 환경을 유지할 수 있습니다.
 
-### ?덈줈??Conda ?섍꼍 ?앹꽦
+### 새로운 Conda 환경 생성
 
 ```bash
 conda create -n myenv python=3.9
 ```
 
-??紐낅졊?대? ?ㅽ뻾?섎㈃ ?ㅼ쓬怨?鍮꾩듂???붾㈃???섏삩??
+이 명령어를 실행하면 설치되는 패키지들을 확인하고, y를 누르면 설치가 완료됩니다.
 
-<figure style="text-align: center;">
-  <img src="../assets/blog/2025-03-18-linux-conda/fig1.png">
-  <!-- # alt="fig1" style="max-width: 100%;">
-  <figcaption>Figure 1. Conda environment activation</figcaption> -->
-</figure>
-
-?ㅼ튂?섎뒗 ?⑦궎吏?ㅼ쓣 ?뺤씤?섍퀬, y瑜??꾨Ⅴ硫??ㅼ튂媛 ?꾨즺?쒕떎.
-
-<figure style="text-align: center;">
-  <img src="../assets/blog/2025-03-18-linux-conda/fig2.png">
-  <!-- # alt="fig1" style="max-width: 100%;">
-  <figcaption>Figure 1. Conda environment activation</figcaption> -->
-</figure>
-
-?ㅼ튂媛 ?꾨즺?섎㈃ ?ㅼ쓬怨?媛숈? ?덈궡 臾멸뎄媛 ?④쾶 ?쒕떎.
-
-y瑜??꾨Ⅴ吏 ?딆븘???섎뒗 ?곹솴?먯꽑 ?ㅼ쓬怨?`-y`?듭뀡???ъ슜??諛붾줈 ?ㅼ튂 ?섍쾶 ?????덈떎.
+설치 과정에서 y를 매번 누르기 번거롭다면 `-y` 옵션을 사용하여 바로 설치할 수 있습니다.
 
 ```bash
 conda create -n test python -y
 ```
 
-`-n` ?듭뀡? name???쎌옄濡?媛?곹솚寃쎌쓽 ?대쫫?쇰줈 ?ъ슜???대쫫???낅젰?????덉쓬
+`-n` 옵션은 name의 약자로 가상환경의 이름을 지정할 때 사용합니다.
 
-### ?앹꽦???섍꼍 ?쒖꽦??
+### 생성된 환경 활성화
 ```bash
 conda activate test
 ```
 
-?쒖꽦?????? (base)媛 (test) ?뱀? 媛?곹솚寃??대쫫?쇰줈 諛붾뚯뿀?붿? 瑗??뺤씤?댁빞?⑸땲??
+활성화되면 터미널의 앞부분이 `(base)`에서 `(test)` 등 해당 가상환경 이름으로 바뀌었는지 꼭 확인해야 합니다.
 
-<figure style="text-align: center;">
-  <img src="../assets/blog/2025-03-18-linux-conda/fig3.png">
-  <!-- # alt="fig1" style="max-width: 100%;">
-  <figcaption>Figure 1. Conda environment activation</figcaption> -->
-</figure>
+**주의사항**
 
-**二쇱쓽?ы빆**
+- 반드시 `conda activate {가상환경 이름}`을 통해 가상환경을 활성화시킨 후 패키지를 설치해야 합니다.
 
-- `(base)`媛 ?꾨땶 `conda activate {媛?곹솚寃??대쫫}` ???듯빐 媛?곹솚寃쎌쓣 ?쒖꽦???쒖폒?쇳빀?덈떎.
+## Conda 기본 라이브러리 설치 명령어
+Conda에서는 기본적으로 아래와 같이 패키지를 설치할 수 있습니다.
 
-<figure style="text-align: center;">
-  <img src="../assets/blog/2025-03-19-linux-conda-environment/fig1.png">
-  <!-- # alt="fig1" style="max-width: 100%;">
-  <figcaption>Figure 1. Conda environment activation</figcaption> -->
-</figure>
+### 기본 설치
 
-<figure style="text-align: center;">
-  <img src="../assets/blog/2025-03-19-linux-conda-environment/fig2.png">
-  <!-- # alt="fig1" style="max-width: 100%;">
-  <figcaption>Figure 1. Conda environment activation</figcaption> -->
-</figure>
-
-## Conda 湲곕낯 ?쇱씠釉뚮윭由??ㅼ튂 紐낅졊??
-conda?먯꽌??湲곕낯?곸쑝濡??꾨옒? 媛숈씠 ?⑦궎吏瑜??ㅼ튂?????덉뒿?덈떎.
-
-### 湲곕낯 ?ㅼ튂
-
-- 紐낅졊??
+- 명령어
 ```bash
-conda install {?⑦궎吏 紐?
+conda install {패키지 명}
 ```
 
-- ?ъ슜 ?덉떆
-
+- 사용 예시
 ```bash
 conda install pandas
 ```
 
-??紐낅졊?대? ?듯빐 conda??湲곕낯 梨꾨꼸?먯꽌 pandas ?⑦궎吏瑜??ㅼ튂?쒕떎.
+이 명령어를 통해 conda의 기본 채널에서 pandas 패키지를 설치합니다.
 
-<figure style="text-align: center;">
-  <img src="../assets/blog/2025-03-19-linux-conda-environment/fig3.png">
-  <!-- # alt="fig1" style="max-width: 100%;">
-  <figcaption>Figure 1. Conda environment activation</figcaption> -->
-</figure>
+### 특정 채널을 지정하여 설치
 
-<figure style="text-align: center;">
-  <img src="../assets/blog/2025-03-19-linux-conda-environment/fig4.png">
-  <!-- # alt="fig1" style="max-width: 100%;">
-  <figcaption>Figure 1. Conda environment activation</figcaption> -->
-</figure>
+기본 채널에 패키지가 없거나 특정 채널의 패키지가 필요한 경우 `-c` 옵션을 사용하여 채널을 명시할 수 있습니다.
 
-y瑜??낅젰?섎㈃ ?쒕떎.
-
-<figure style="text-align: center;">
-  <img src="../assets/blog/2025-03-19-linux-conda-environment/fig5.png">
-  <!-- # alt="fig1" style="max-width: 100%;">
-  <figcaption>Figure 1. Conda environment activation</figcaption> -->
-</figure>
-
-?대윴 ?붾㈃???⑤㈃ ?ㅼ튂媛 ?꾨즺??寃껋씠??
-
-conda install pandas瑜?????`-y` ?듭뀡???ㅼ뿉 ?묒꽦?댁＜硫???怨쇱젙 ?놁씠 ?ㅼ튂媛 ?꾨즺?쒕떎.
-
-### ?뱀젙 梨꾨꼸??吏?뺥븯???ㅼ튂
-
-洹몃깷 `conda install`???섍쾶 ?쒕떎硫?湲곕낯 梨꾨꼸?먯꽌 ?⑦궎吏瑜??ㅼ튂?섍쾶 ?섎뒗?? 湲곕낯 梨꾨꼸???⑦궎吏媛 ?녿뒗 寃쎌슦 ?뱀? ?뱀젙 梨꾨꼸???⑦궎吏媛 ?꾩슂?????ъ슜?섎뒗 ?듭뀡?낅땲?? `-c` ?듭뀡???ъ슜?섏뿬 梨꾨꼸??紐낆떆?????덉뒿?덈떎.
-
-- conda-forge 梨꾨꼸 ?ъ슜 紐낅졊??
-```bash
-conda install -c conda-forge {?⑦궎吏紐?
-```
-
-- conda-forge 梨꾨꼸 ?ъ슜 ?덉떆
-
+- conda-forge 채널 사용 예시
 ```bash
 conda install -c conda-forge pandas
 ```
 
-- pytorch 梨꾨꼸 ?ъ슜 ?덉떆
-
+- pytorch 채널 사용 예시
 ```bash
 conda install -c pytorch pytorch torchvision
 ```
 
-PyTorch 諛?愿???⑦궎吏?ㅼ? pytorch 梨꾨꼸???듯빐 ?ㅼ튂?섎뒗 寃껋씠 沅뚯옣??
-## pip瑜??댁슜???쇱씠釉뚮윭由??ㅼ튂
+PyTorch 및 관련 패키지들은 공식 `pytorch` 채널을 통해 설치하는 것이 권장됩니다.
 
-媛?곹솚寃??댁뿉??pip瑜??ъ슜?섎㈃ Conda???녿뒗 ?⑦궎吏瑜??ㅼ튂?????덉뒿?덈떎.
+## pip를 이용한 라이브러리 설치
 
-- **二쇱쓽?ы빆**
-- Conda ?섍꼍?먯꽌??媛湲됱쟻 Conda ?⑦궎吏濡??ㅼ튂?????덈뒗 ?쇱씠釉뚮윭由щ? ?곗꽑?곸쑝濡??ъ슜?섎뒗 寃껋씠 醫뗭뒿?덈떎. pip? Conda瑜??쇱슜??寃쎌슦 ?⑦궎吏 異⑸룎??諛쒖깮?????덉쑝誘濡? pip瑜??ъ슜???뚮뒗 ?ㅼ튂 ??dependencies瑜??뺤씤?섎뒗 寃껋씠 ?꾩슂?⑸땲??
-- 洹몃옒??媛湲됱쟻 Conda??湲곕낯梨꾨꼸?대굹 Conda-forge??梨꾨꼸?먯꽌 ?ㅼ튂?섎뒗 寃껋쓣 沅뚯옣?⑸땲??
+가상환경 내에서 pip를 사용하면 Conda에 없는 패키지를 설치할 수 있습니다.
 
-pip??conda? ?숈씪??紐낅졊?대줈 ?ㅼ튂媛 媛?ν븯??
+- **주의사항**
+- Conda 환경에서는 가급적 Conda 패키지로 설치할 수 있는 라이브러리를 우선적으로 사용하는 것이 좋습니다. pip와 Conda를 섞어서 사용할 경우 패키지 충돌이 발생할 수 있으므로 주의가 필요합니다.
+
+pip도 conda와 동일한 명령어로 설치가 가능합니다.
 
 ```bash
 pip install matplotlib
 ```
 
-<figure style="text-align: center;">
-  <img src="../assets/blog/2025-03-19-linux-conda-environment/fig6.png">
-  <!-- # alt="fig1" style="max-width: 100%;">
-  <figcaption>Figure 1. Conda environment activation</figcaption> -->
-</figure>
+## Conda와 pip 설치 차이 요약
 
-pip??conda install怨??ㅻⅤ寃??곕줈 Proceed ([y], n)?媛 ?⑥??딄퀬 諛붾줈 ?ㅼ튂?쒕떎.
+**Conda 설치:**
+Conda는 패키지 관리 및 환경 관리를 동시에 지원하며, 바이너리 수준에서 의존성을 관리하므로 라이브러리 설치가 간편하고 안정적입니다.
 
-<figure style="text-align: center;">
-  <img src="../assets/blog/2025-03-19-linux-conda-environment/fig7.png">
-  <!-- # alt="fig1" style="max-width: 100%;">
-  <figcaption>Figure 1. Conda environment activation</figcaption> -->
-</figure>
+**pip 설치:**
+pip는 Python의 표준 패키지 관리 도구로, PyPI(Python Package Index)에서 라이브러리를 설치합니다. Conda 채널에 없는 최신 패키지를 설치할 때 유용합니다.
 
-?대윴 ?붾㈃???щ떎硫??ㅼ튂媛 ?꾨즺??寃껋씠??
-
-?덉떆濡?留뚮뱺 媛?곹솚寃쎌씠湲곗뿉 Conda? pip瑜??좉꼍?곗? ?딄퀬 ?ㅼ튂?덉?留?二쇱쓽?ы빆???덉뼱 [?ㅼ쓬 湲](https://jjjabcd.github.io/github-pages/linux/2025/03/20/linux-environment.html)??李멸퀬?섎㈃ ?쒕떎.
-
-## Conda? pip ?ㅼ튂 ?쒖쓽 媛쒕뀗 諛??ъ슜踰??뺣━
-
-Conda ?ㅼ튂:
-
-Conda???⑦궎吏 愿由?諛??섍꼍 愿由щ? ?숈떆??吏?먰븯硫? ?쇱씠釉뚮윭由щ뱾???먯돺寃??ㅼ튂?????덉뒿?덈떎.
-
-pip ?ㅼ튂:
-
-pip??Python???쒖? ?⑦궎吏 愿由??꾧뎄濡? PyPI(Python Package Index)?먯꽌 ?쇱씠釉뚮윭由щ? ?ㅼ튂?????덉뒿?덈떎.
-
-梨꾨꼸:
-
-Conda ?⑦궎吏???щ윭 梨꾨꼸???듯빐 愿由щ릺硫? `-c` ?듭뀡???ъ슜?섎ŉ ?뱀젙 梨꾨꼸?먯꽌 ?ㅼ튂?????덉뒿?덈떎. ?덈? ?ㅼ뼱, conda-forge??pytorch? 媛숈씠 ?좊ː?????덈뒗 梨꾨꼸??吏?뺥븯???ㅼ튂?섎㈃ 理쒖떊 ?⑦궎吏瑜?蹂대떎 ?덉젙?곸쑝濡??ㅼ튂?????덉뒿?덈떎.
-
-諛묒뿉 留곹겕瑜??듯빐 吏?먰븯???⑦궎吏媛 ?덈뒗吏???좊Т? ?⑦궎吏???대쫫?대굹 踰꾩쟾 ?깆쓣 ?뚯븙?????덉뒿?덈떎.
+**채널:**
+Conda 패키지는 여러 채널을 통해 관리되며, `conda-forge`나 `pytorch`와 같이 신뢰할 수 있는 채널을 지정하여 설치하면 보다 최신이고 안정적인 패키지를 사용할 수 있습니다.
 
 - [conda-forge | Anaconda.org](https://anaconda.org/conda-forge)
-- [PyPI 쨌 The Python Package Index](https://pypi.org/)
+- [PyPI · The Python Package Index](https://pypi.org/)
 
-### [李멸퀬?먮즺]
+### [참고자료]
 
-- [[?뚯씠?? python] ?꾨굹肄섎떎 媛?곹솚寃??앹꽦, 蹂듭궗, ?쇱씠釉뚮윭由??ㅼ튂](https://alliswellv2030.tistory.com/3)
-
-- [[Anaconda] 媛?곹솚寃??뺤씤/?앹꽦/?쒖꽦???ㅼ튂/?⑦궎吏 ?뺤씤/?⑦궎吏 ?뚯씪 異붿텧/鍮꾪솢?깊솕/??젣](https://mingyu6952.tistory.com/entry/Anaconda-%EA%B0%80%EC%83%81%ED%99%98%EA%B2%BD-%ED%99%95%EC%9D%B8%EC%83%9D%EC%84%B1%ED%99%9C%EC%84%B1%ED%99%94%EC%84%A4%EC%B9%98%ED%8C%A8%ED%82%A4%EC%A7%80-%ED%99%95%EC%9D%B8%EB%B9%84%ED%99%9C%EC%84%B1%ED%99%94%EC%82%AD%EC%A0%9C)
-
+- [[데이터 과학 python] 아나콘다 가상환경 생성, 복사, 라이브러리 설치](https://alliswellv2030.tistory.com/3)
+- [[Anaconda] 가상환경 확인/생성/활성화/설치/패키지 확인/패키지 파일 추출/비활성화/삭제](https://mingyu6952.tistory.com/entry/Anaconda-%EA%B0%80%EC%83%81%ED%99%98%EA%B2%BD-%ED%99%95%EC%9D%B8%EC%83%9D%EC%84%B1%ED%99%9C%EC%84%B1%ED%99%94%EC%84%A4%EC%B9%98%ED%8C%A8%ED%82%A4%EC%A7%80-%ED%99%95%EC%9D%B8%EB%B9%84%ED%99%9C%EC%84%B1%ED%99%94%EC%82%AD%EC%A0%9C)

@@ -1,76 +1,74 @@
-﻿---\r\ntoc:\r\n  sidebar: left
+---
 layout: post
-title: "Ubuntu?먯꽌 Miniconda ?ㅼ튂"
+title: "Ubuntu에서 Miniconda 설치"
 date: 2025-03-18
 categories: [Environment Setting]
 tags:
   - ubuntu
   - miniconda
-  - environment
-description: "Miniconda ?ㅼ튂."
----\r\ntoc:\r\n  sidebar: left
+description: "Ubuntu 환경에서 Miniconda를 설치하는 방법 가이드"
+toc:
+  sidebar: left
+---
 
-# Ubuntu?먯꽌 Miniconda ?ㅼ튂
+# Ubuntu에서 Miniconda 설치
 
-Ubuntu ?섍꼍?먯꽌 Python 媛쒕컻 ?섍꼍??援ъ텞?섍린 ?꾪븳 媛꾪렪??諛⑸쾿 以??섎굹??Miniconda ?ㅼ튂 諛⑸쾿???뺣━???덉떆?낅땲?? ??媛?대뱶??SSH ?묒냽 ???곕??먯쓣 ?듯빐 吏꾪뻾?섎뒗 寃껋쓣 ?꾩젣濡??섎ŉ, Miniconda瑜??ㅼ튂?섎㈃ ?댄썑 ?꾩슂???⑦궎吏 諛?媛쒕컻 ?섍꼍 援ъ꽦???⑥뵮 ?섏썡?댁쭛?덈떎.
+Ubuntu 환경에서 Python 개발 환경을 구축하기 위한 간편한 방법 중 하나인 Miniconda 설치 방법을 정리한 예시입니다. 이 가이드는 SSH 접속 후 터미널을 통해 진행하는 것을 전제로 하며, Miniconda를 설치하면 이후 필요한 패키지 및 개발 환경 구성이 훨씬 수월해집니다.
 
-## Miniconda??
+## Miniconda란?
 
-Miniconda??Anaconda??寃쎈웾 踰꾩쟾?쇰줈, 湲곕낯?곸씤 Python ?ㅽ뻾 ?섍꼍怨?Conda ?⑦궎吏 愿由??꾧뎄留??ы븿?섍퀬 ?덉뒿?덈떎. ?꾩슂???곕씪 ?꾩슂???⑦궎吏?ㅼ쓣 媛쒕퀎?곸쑝濡??ㅼ튂?????덉쑝誘濡? 媛蹂띻퀬 ?좎뿰??媛쒕컻 ?섍꼍??援ъ꽦?????덉뒿?덈떎.
+Miniconda는 Anaconda의 경량 버전으로, 기본적인 Python 실행 환경과 Conda 패키지 관리 도구만 포함하고 있습니다. 필요에 따라 필요한 패키지들을 개별적으로 설치할 수 있으므로 가볍고 유연하게 개발 환경을 구성할 수 있습니다.
 
-## Miniconda ?ㅼ튂 ?④퀎
+## Miniconda 설치 단계
 
-### Step 1: ?ㅼ튂 ?ㅽ겕由쏀듃 ?ㅼ슫濡쒕뱶
+### Step 1: 설치 스크립트 다운로드
 
-Miniconda ?ㅼ튂 ?ㅽ겕由쏀듃瑜?怨듭떇 ?뱀궗?댄듃?먯꽌 ?ㅼ슫濡쒕뱶?⑸땲?? ?덈? ?ㅼ뼱, 理쒖떊 踰꾩쟾??Miniconda3 Linux???ㅼ튂 ?ㅽ겕由쏀듃瑜??ㅼ슫濡쒕뱶?섎뒗 紐낅졊?대뒗 ?ㅼ쓬怨?媛숈뒿?덈떎.
+Miniconda 설치 스크립트를 공식 웹사이트에서 다운로드합니다. 예를 들어, 최신 버전의 Miniconda3 Linux용 설치 스크립트를 다운로드하는 명령어는 다음과 같습니다.
 
 ```bash
 wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
 ```
 
-### Step 2: ?ㅼ튂 ?ㅽ겕由쏀듃 ?ㅽ뻾 沅뚰븳 遺??
-?ㅼ슫濡쒕뱶???ㅽ겕由쏀듃???ㅽ뻾 沅뚰븳??遺?ы빀?덈떎.
+### Step 2: 설치 스크립트 실행 권한 부여
+다운로드한 스크립트에 실행 권한을 부여합니다.
 
 ```bash
 chmod +x Miniconda3-latest-Linux-x86_64.sh
 ```
 
-### Step 3: ?ㅼ튂 ?ㅽ겕由쏀듃 ?ㅽ뻾
+### Step 3: 설치 스크립트 실행
 
-?ㅽ겕由쏀듃瑜??ㅽ뻾?섏뿬 Miniconda瑜??ㅼ튂?⑸땲?? ?ㅽ겕由쏀듃 ?ㅽ뻾 ???ㅼ튂 寃쎈줈 諛??쇱씠?좎뒪 ?숈쓽??愿??吏덈Ц???섑??⑸땲??
+스크립트를 실행하여 Miniconda를 설치합니다. 스크립트 실행 시 설치 경로 및 라이선스 동의에 관한 질문이 나타납니다.
 
 ```bash
 bash ./Miniconda3-latest-Linux-x86_64.sh
 ```
 
-- License ?숈쓽: yes ?낅젰
-- ?ㅼ튂 寃쎈줈 吏?? 湲곕낯 寃쎈줈瑜??ъ슜?섎㈃ Enter?ㅻ? ?꾨Ⅴ怨? ?먰븯??寃쎈줈瑜?吏??  (?? /home/username/miniconda3)
-- yes
+- License 동의: yes 입력
+- 설치 경로 지정: 기본 경로를 사용하면 Enter키를 누르고, 원하는 경로를 지정 (예: /home/username/miniconda3)
+- 마지막에 `conda init` 관련 질문이 나오면 `yes`를 입력합니다.
 
-### Step 4: ?곕????ъ떆??
-?곕??먯쓣 ?ъ떆?묓빐??base濡?媛?곹솚寃쎌씠 ?щ??낅맗?덈떎.
+### Step 4: 터미널 재시작
+
+터미널을 재시작하거나 아래 명령어를 실행하여 변경 사항을 적용합니다.
 
 ```bash
 source ~/.bashrc
 ```
 
-## Miniconda ?ъ슜 ?쒖옉?섍린
+## Miniconda 사용 시작하기
 
-?ㅼ튂媛 ?꾨즺 諛??곕????щ??낃퉴吏 ?덈떎硫? Conda ?섍꼍???쒖꽦?뷀븯怨?湲곕낯?곸씤 ?⑦궎吏 ?ㅼ튂 ?깆쓣 吏꾪뻾?????덉뒿?덈떎.
+설치가 완료되었다면, Conda 환경을 활성화하고 기본적인 패키지 설치 등을 진행할 수 있습니다.
 
-### Conda 踰꾩쟾 ?뺤씤
+### Conda 버전 확인
 
 ```bash
 conda --version
 ```
 
-?ㅼ쓬湲? ?ㅼ튂??誘몃땲肄섎떎瑜??ъ슜?섏뿬 媛?곹솚寃쎌쓣 ?앹꽦?섍퀬, ?앹꽦??媛?곹솚寃쎌뿉 媛쒕컻 ?먮뒗 ?곌뎄???꾩슂???⑦궎吏?ㅼ쓣 ?ㅼ튂?섎뒗 怨쇱젙???뚭컻???덉젙?대떎.
+설치가 정상적으로 완료되었다면 현재 설치된 Conda의 버전이 출력됩니다.
 
----\r\ntoc:\r\n  sidebar: left
+### [참고자료]
 
-### [李멸퀬?먮즺]
-
-- [[Miniconda] Ubuntu??Miniconda ?ㅼ튂?섍린](https://soundprovider.tistory.com/entry/Miniconda-Ubuntu%EC%97%90-Miniconda-%EC%84%A4%EC%B9%98%ED%95%98%EA%B8%B0)
-
-- [Ubuntu 22.04??miniconda ?ㅼ튂 in Ternimal](https://velog.io/@cosmos42/Ubuntu-22.04-miniconda-install-in-Ternimal)
-
+- [[Miniconda] Ubuntu에 Miniconda 설치하기](https://soundprovider.tistory.com/entry/Miniconda-Ubuntu%EC%97%90-Miniconda-%EC%84%A4%EC%B9%98%ED%95%98%EA%B8%B0)
+- [Ubuntu 22.04에 miniconda 설치 in Terminal](https://velog.io/@cosmos42/Ubuntu-22.04-miniconda-install-in-Ternimal)
