@@ -25,7 +25,8 @@ hr {
 
 table {
   margin-bottom: 2.5rem !important;
-  width: 100%;
+  width: 100% !important;
+  border-collapse: collapse;
 
   td,
   th {
@@ -39,10 +40,11 @@ table {
   }
 }
 
-.table-responsive, .post table, .post .table-responsive {
+.table-responsive, .post .table-responsive {
   margin-bottom: 2.5rem !important;
   display: block;
   width: 100%;
+  overflow-x: auto;
 }
 
 a,
