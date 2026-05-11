@@ -41,17 +41,6 @@ ninja.data = [{
             window.location.href = "/blog/2026/pytorch/";
           
         },
-      },{id: "post-reinforcement-learning-개념",
-        
-          title: "Reinforcement Learning 개념",
-        
-        description: "Reinforcement Learning 기초 개념 요약",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/blog/2026/rl/";
-          
-        },
       },{id: "post-smiles-표기법",
         
           title: "SMILES 표기법",
@@ -116,6 +105,28 @@ ninja.data = [{
         handler: () => {
           
             window.location.href = "/blog/2025/molso/";
+          
+        },
+      },{id: "post-reinforcement-learning-기초-개념-2-algorithm-classification",
+        
+          title: "Reinforcement Learning 기초 개념 (2): Algorithm Classification",
+        
+        description: "Reinforcement Learning algorithm의 model-free, model-based, on-policy, off-policy 분류 정리",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2024/rl-basic-2/";
+          
+        },
+      },{id: "post-reinforcement-learning-기초-개념-1-concept-mdp-mathematical-formulation",
+        
+          title: "Reinforcement Learning 기초 개념 (1): Concept, MDP, Mathematical Formulation",
+        
+        description: "Reinforcement Learning의 기본 개념, MDP, return, objective, policy, value function 정리",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2024/rl-basic-1/";
           
         },
       },{id: "books-the-godfather",
