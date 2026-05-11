@@ -30,77 +30,77 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/cv/";
           },
-        },{id: "post-",
+        },{id: "post-pytorch-입문-cpu-vs-gpu-버전-차이와-cuda-가능-여부-확인하기",
         
-          title: "",
+          title: "PyTorch 입문: CPU vs GPU 버전 차이와 CUDA 가능 여부 확인하기",
         
-        description: "",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/blog/2026/2025-03-19-conda-environment/";
-          
-        },
-      },{id: "post-pytorch",
-        
-          title: "Pytorch",
-        
-        description: "",
+        description: "PyTorch의 CPU/GPU 버전 차이를 이해하고 CUDA 가능 여부를 확인하는 방법",
         section: "Posts",
         handler: () => {
           
             window.location.href = "/blog/2026/pytorch/";
           
         },
-      },{id: "post-rl",
+      },{id: "post-reinforcement-learning-개념",
         
-          title: "Rl",
+          title: "Reinforcement Learning 개념",
         
-        description: "",
+        description: "Reinforcement Learning 기초 개념 요약",
         section: "Posts",
         handler: () => {
           
             window.location.href = "/blog/2026/rl/";
           
         },
-      },{id: "post-cheminformatics-smiles",
+      },{id: "post-smiles-표기법",
         
-          title: "Cheminformatics Smiles",
+          title: "SMILES 표기법",
         
-        description: "",
+        description: "SMILES 표기법 설명",
         section: "Posts",
         handler: () => {
           
-            window.location.href = "/blog/2025/cheminformatics-smiles/";
+            window.location.href = "/blog/2025/smiles/";
           
         },
-      },{id: "post-commend",
+      },{id: "post-리눅스-명령어-정리",
         
-          title: "Commend",
+          title: "리눅스 명령어 정리",
         
-        description: "",
+        description: "MobaXterm 또는 Terminal 등에서 자주 사용하는 리눅스 명령어 정리",
         section: "Posts",
         handler: () => {
           
             window.location.href = "/blog/2025/commend/";
           
         },
-      },{id: "post-jupyter",
+      },{id: "post-ssh-접속-후-jupyter-사용하기",
         
-          title: "Jupyter",
+          title: "SSH 접속 후 Jupyter 사용하기",
         
-        description: "",
+        description: "MobaXterm, PuTTY 등을 이용해 원격 서버에서 Jupyter Notebook 및 JupyterLab을 실행하는 방법 정리",
         section: "Posts",
         handler: () => {
           
             window.location.href = "/blog/2025/jupyter/";
           
         },
-      },{id: "post-conda-install",
+      },{id: "post-conda-가상환경에-라이브러리-설치",
         
-          title: "Conda Install",
+          title: "Conda 가상환경에 라이브러리 설치",
         
-        description: "",
+        description: "Miniconda 가상환경 생성 및 패키지 관리 방법 정리",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2025/conda-environment/";
+          
+        },
+      },{id: "post-ubuntu에서-miniconda-설치",
+        
+          title: "Ubuntu에서 Miniconda 설치",
+        
+        description: "Ubuntu 환경에서 Miniconda를 설치하는 방법 가이드",
         section: "Posts",
         handler: () => {
           
