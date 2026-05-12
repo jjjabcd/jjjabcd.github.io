@@ -129,6 +129,17 @@ ninja.data = [{
             window.location.href = "/blog/2024/rl-basic-1/";
           
         },
+      },{id: "post-repaint-inpainting-using-denoising-diffusion-probabilistic-models",
+        
+          title: "RePaint: Inpainting using denoising diffusion probabilistic models",
+        
+        description: "Pretrained unconditional DDPM을 활용하여 mask에 의존하지 않는 image inpainting을 수행하는 RePaint method 리뷰",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2024/repaint/";
+          
+        },
       },{id: "books-the-godfather",
           title: 'The Godfather',
           description: "",
@@ -197,42 +208,21 @@ ninja.data = [{
         title: 'CV',
         section: 'Socials',
         handler: () => {
-          window.open("/assets/pdf/example_pdf.pdf", "_blank");
+          window.open("/assets/pdf/cv.pdf", "_blank");
         },
       },{
         id: 'social-email',
         title: 'email',
         section: 'Socials',
         handler: () => {
-          window.open("mailto:%79%6F%75@%65%78%61%6D%70%6C%65.%63%6F%6D", "_blank");
-        },
-      },{
-        id: 'social-inspire',
-        title: 'Inspire HEP',
-        section: 'Socials',
-        handler: () => {
-          window.open("https://inspirehep.net/authors/1010907", "_blank");
-        },
-      },{
-        id: 'social-rss',
-        title: 'RSS Feed',
-        section: 'Socials',
-        handler: () => {
-          window.open("/feed.xml", "_blank");
+          window.open("mailto:%72%6C%61%77%6C%73%67%75%72%6A%68@%67%6D%61%69%6C.%63%6F%6D", "_blank");
         },
       },{
         id: 'social-scholar',
         title: 'Google Scholar',
         section: 'Socials',
         handler: () => {
-          window.open("https://scholar.google.com/citations?user=qc6CJjYAAAAJ", "_blank");
-        },
-      },{
-        id: 'social-custom_social',
-        title: 'Custom_social',
-        section: 'Socials',
-        handler: () => {
-          window.open("https://www.alberteinstein.com/", "_blank");
+          window.open("https://scholar.google.com/citations?user=8ly72dcAAAAJ", "_blank");
         },
       },{
       id: 'light-theme',
