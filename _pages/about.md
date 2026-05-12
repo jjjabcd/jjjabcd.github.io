@@ -3,6 +3,7 @@ layout: about
 title: about
 permalink: /
 subtitle: Master Student
+navbar: false
 
 profile:
   align: right
@@ -14,7 +15,7 @@ profile:
   #   <p>Your City, State 12345</p>
 
 selected_papers: false # true # includes a list of papers marked as "selected={true}"
-social: false # true # includes social icons at the bottom of the page
+social: true # true # includes social icons at the bottom of the page
 
 announcements:
   enabled: true # includes a list of news items
@@ -27,7 +28,7 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-Hi, I’m Jin Hyuk Kim, a M.S. student in Computer Science at Hallym University, advised by [Prof. Jonghwan Choi](https://sites.google.com/view/hallym-apclab/pi?authuser=0).
+Hi, I’m Jin Hyuk Kim(pronounced '김진혁'), a M.S. student in Computer Science at Hallym University, advised by [Prof. Jonghwan Choi](https://sites.google.com/view/hallym-apclab/pi?authuser=0).
 
 I am a member of the [AI-Powered Cheminformatics Laboratory](https://sites.google.com/view/hallym-apclab/home?authuser=0), where I conduct research on applying artificial intelligence to scientific problems.
 
