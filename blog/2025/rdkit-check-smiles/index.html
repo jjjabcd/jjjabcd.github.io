@@ -1,0 +1,170 @@
+<!DOCTYPE html> <html lang="en"> <head> <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> <meta charset="utf-8"> <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> <meta http-equiv="X-UA-Compatible" content="IE=edge"> <title> InChIKey를 이용한 동일 분자구조 비교 | Jin Hyuk Kim </title> <meta name="author" content="Jin Hyuk Kim"> <meta name="description" content="RDKit과 InChIKey를 이용한 동일 분자구조 비교"> <meta name="keywords" content="jekyll, jekyll-theme, academic-website, portfolio-website"> <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: https:; font-src 'self' data: https:; media-src 'self' https:; frame-src 'self' https:; connect-src 'self' https:;"> <link rel="stylesheet" href="/assets/css/bootstrap.min.css?v=a4b3f509e79c54a512b890d73235ef04"> <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdbootstrap@4.20.0/css/mdb.min.css" integrity="sha256-jpjYvU3G3N6nrrBwXJoVEYI/0zw8htfFnhT9ljN3JJw=" crossorigin="anonymous"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-table@1.22.4/dist/bootstrap-table.min.css" integrity="sha256-uRX+PiRTR4ysKFRCykT8HLuRCub26LgXJZym3Yeom1c=" crossorigin="anonymous"> <link defer rel="stylesheet" href="/assets/css/academicons.min.css?v=f0b7046b84e425c55f3463ac249818f5"> <link defer rel="stylesheet" href="/assets/css/scholar-icons.css?v=62b2ac103a88034e6882a5be5f3e2772"> <link defer rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons&amp;display=swap"> <link defer rel="stylesheet" href="/assets/css/jekyll-pygments-themes-github.css?v=591dab5a4e56573bf4ef7fd332894c99" media="" id="highlight_theme_light"> <link defer href="/assets/css/bootstrap-toc.min.css?v=6f5af0bb9aab25d79b2448143cbeaa88" rel="stylesheet"> <link rel="shortcut icon" href="data:image/svg+xml,&lt;svg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20100%20100%22&gt;&lt;text%20y=%22.9em%22%20font-size=%2290%22&gt;%E2%9A%9B%EF%B8%8F&lt;/text&gt;&lt;/svg&gt;"> <link rel="stylesheet" href="/assets/css/main.css?v=d41d8cd98f00b204e9800998ecf8427e"> <link rel="canonical" href="https://jjjabcd.github.io/blog/2025/rdkit-check-smiles/"> <script src="/assets/js/theme.js?v=5c3b402324e83c0be6eff2aed7977442"></script> <link defer rel="stylesheet" href="/assets/css/jekyll-pygments-themes-native.css?v=5847e5ed4a4568527aa6cfab446049ca" media="none" id="highlight_theme_dark"> <script>
+    initTheme();
+  </script> </head> <body class="fixed-top-nav "> <header> <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top" role="navigation"> <div class="container"> <a class="navbar-brand title font-weight-lighter" href="/"> Jin Hyuk Kim </a> <button class="navbar-toggler collapsed ml-auto" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar top-bar"></span> <span class="icon-bar middle-bar"></span> <span class="icon-bar bottom-bar"></span> </button> <div class="collapse navbar-collapse text-right" id="navbarNav"> <ul class="navbar-nav ml-auto flex-nowrap"> <li class="nav-item "> <a class="nav-link" href="/">about </a> </li> <li class="nav-item "> <a class="nav-link" href="/publications/">publications </a> </li> <li class="nav-item active"> <a class="nav-link" href="/blog/">blog </a> </li> <li class="nav-item "> <a class="nav-link" href="/projects/">projects </a> </li> <li class="nav-item "> <a class="nav-link" href="/assets/pdf/cv.pdf">CV </a> </li> <li class="toggle-container"> <button id="light-toggle" title="Change theme"> <i class="fa-solid fa-moon" id="light-toggle-dark"></i> <i class="fa-solid fa-sun" id="light-toggle-light"></i> </button> </li> </ul> </div> </div> </nav> <progress id="progress" value="0"> <div class="progress-container"> <span class="progress-bar"></span> </div> </progress> </header> <div class="container mt-5" role="main"> <div class="row"> <div class="col-sm-3"> <nav id="toc-sidebar" class="sticky-top"></nav> </div> <div class="col-sm-9"> <div class="post"> <header class="post-header"> <h1 class="post-title">InChIKey를 이용한 동일 분자구조 비교</h1> <p class="post-meta"> Created on April 18, 2025 </p> <p class="post-tags"> <a href="/blog/2025"> <i class="fa-solid fa-calendar fa-sm"></i> 2025 </a>   ·   <a href="/blog/tag/cheminformatics"> <i class="fa-solid fa-hashtag fa-sm"></i> cheminformatics</a>   <a href="/blog/tag/rdkit"> <i class="fa-solid fa-hashtag fa-sm"></i> rdkit</a>   <a href="/blog/tag/smiles"> <i class="fa-solid fa-hashtag fa-sm"></i> smiles</a>   <a href="/blog/tag/inchikey"> <i class="fa-solid fa-hashtag fa-sm"></i> inchikey</a>   <a href="/blog/tag/molecular-identifier"> <i class="fa-solid fa-hashtag fa-sm"></i> molecular-identifier</a>   ·   <a href="/blog/category/cheminformatics"> <i class="fa-solid fa-tag fa-sm"></i> Cheminformatics</a> </p> </header> <article class="post-content pretty-table"> <div id="markdown-content"> <h2 id="inchikey-소개">InChIKey 소개</h2> <p>SMILES는 molecule structure를 문자열로 표현하는 대표적인 molecular representation이다. 하지만 같은 molecule이라도 atom ordering이나 branch 표현 방식에 따라 서로 다른 SMILES로 작성될 수 있다.</p> <p>예를 들어 ethanol은 다음과 같이 서로 다른 SMILES로 표현할 수 있다.</p> <div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>CCO
+OCC
+</code></pre></div></div> <p>두 SMILES string은 서로 다르지만, 실제로는 같은 ethanol structure를 나타낸다. 따라서 molecule의 동일 여부를 판단할 때 SMILES string을 그대로 비교하면 같은 molecule을 다른 molecule로 잘못 판단할 수 있다.</p> <p>이 문제를 해결하기 위해 SMILES를 RDKit <code class="language-plaintext highlighter-rouge">Mol</code> object로 변환한 뒤, canonical representation 또는 molecular identifier를 생성하여 비교할 수 있다. 이 글에서는 InChIKey를 이용하여 두 SMILES가 같은 molecule을 나타내는지 확인하는 방법을 정리한다.</p> <h2 id="inchi와-inchikey">InChI와 InChIKey</h2> <p>InChI는 International Chemical Identifier의 약자로, molecule structure를 표준화된 문자열로 표현하기 위한 identifier이다. InChIKey는 InChI를 고정 길이 hash 형태로 변환한 identifier이다.</p> <p>InChI와 InChIKey의 차이는 다음과 같이 정리할 수 있다.</p> <table> <thead> <tr> <th>Identifier</th> <th>설명</th> </tr> </thead> <tbody> <tr> <td>InChI</td> <td>Molecule structure 정보를 계층적으로 포함하는 긴 문자열</td> </tr> <tr> <td>InChIKey</td> <td>InChI를 fixed-length hash 형태로 변환한 문자열</td> </tr> <tr> <td>Canonical SMILES</td> <td>Toolkit의 canonicalization rule에 따라 생성된 SMILES</td> </tr> <tr> <td>Input SMILES</td> <td>사용자가 입력한 원본 SMILES string</td> </tr> </tbody> </table> <p>InChIKey는 길이가 고정되어 있어 database matching, duplicate checking, compound ID mapping 등에 사용하기 편하다. 따라서 서로 다른 SMILES가 같은 molecule을 나타내는지 확인할 때 InChIKey 비교를 사용할 수 있다.</p> <h2 id="rdkit에서-inchikey-생성">RDKit에서 InChIKey 생성</h2> <p>RDKit에서는 SMILES를 <code class="language-plaintext highlighter-rouge">Mol</code> object로 변환한 뒤 <code class="language-plaintext highlighter-rouge">Chem.MolToInchiKey()</code>를 사용하여 InChIKey를 생성할 수 있다.</p> <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="n">rdkit</span> <span class="kn">import</span> <span class="n">Chem</span>
+<span class="kn">from</span> <span class="n">rdkit.Chem.rdchem</span> <span class="kn">import</span> <span class="n">Mol</span>
+
+
+<span class="k">def</span> <span class="nf">get_inchikey</span><span class="p">(</span><span class="n">smiles</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span> <span class="o">|</span> <span class="bp">None</span><span class="p">:</span>
+    <span class="sh">"""</span><span class="s">
+    Convert a SMILES string into an InChIKey.
+
+    Args:
+        smiles (str): Input SMILES string.
+
+    Returns:
+        str | None: InChIKey if the input SMILES is valid, otherwise None.
+    </span><span class="sh">"""</span>
+    <span class="n">mol</span><span class="p">:</span> <span class="n">Mol</span> <span class="o">|</span> <span class="bp">None</span> <span class="o">=</span> <span class="n">Chem</span><span class="p">.</span><span class="nc">MolFromSmiles</span><span class="p">(</span><span class="n">smiles</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">mol</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+        <span class="k">return</span> <span class="bp">None</span>
+
+    <span class="n">inchikey</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">Chem</span><span class="p">.</span><span class="nc">MolToInchiKey</span><span class="p">(</span><span class="n">mol</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">inchikey</span>
+
+
+<span class="n">smiles</span> <span class="o">=</span> <span class="sh">"</span><span class="s">CCO</span><span class="sh">"</span>
+<span class="n">inchikey</span> <span class="o">=</span> <span class="nf">get_inchikey</span><span class="p">(</span><span class="n">smiles</span><span class="p">)</span>
+
+<span class="nf">print</span><span class="p">(</span><span class="n">inchikey</span><span class="p">)</span>
+</code></pre></div></div> <p>위 코드에서 <code class="language-plaintext highlighter-rouge">Chem.MolFromSmiles()</code>는 SMILES string을 RDKit <code class="language-plaintext highlighter-rouge">Mol</code> object로 변환한다. 이후 <code class="language-plaintext highlighter-rouge">Chem.MolToInchiKey()</code>는 해당 <code class="language-plaintext highlighter-rouge">Mol</code> object를 기반으로 InChIKey를 생성한다.</p> <h2 id="서로-다른-smiles의-동일-여부-비교">서로 다른 SMILES의 동일 여부 비교</h2> <p>두 SMILES가 같은 molecule을 나타내는지 확인하려면 각각을 InChIKey로 변환한 뒤, 두 InChIKey가 같은지 비교하면 된다.</p> <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="n">rdkit</span> <span class="kn">import</span> <span class="n">Chem</span>
+<span class="kn">from</span> <span class="n">rdkit.Chem.rdchem</span> <span class="kn">import</span> <span class="n">Mol</span>
+
+
+<span class="k">def</span> <span class="nf">get_inchikey</span><span class="p">(</span><span class="n">smiles</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span> <span class="o">|</span> <span class="bp">None</span><span class="p">:</span>
+    <span class="sh">"""</span><span class="s">
+    Convert a SMILES string into an InChIKey.
+
+    Args:
+        smiles (str): Input SMILES string.
+
+    Returns:
+        str | None: InChIKey if the input SMILES is valid, otherwise None.
+    </span><span class="sh">"""</span>
+    <span class="n">mol</span><span class="p">:</span> <span class="n">Mol</span> <span class="o">|</span> <span class="bp">None</span> <span class="o">=</span> <span class="n">Chem</span><span class="p">.</span><span class="nc">MolFromSmiles</span><span class="p">(</span><span class="n">smiles</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">mol</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+        <span class="k">return</span> <span class="bp">None</span>
+
+    <span class="n">inchikey</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">Chem</span><span class="p">.</span><span class="nc">MolToInchiKey</span><span class="p">(</span><span class="n">mol</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">inchikey</span>
+
+
+<span class="k">def</span> <span class="nf">is_same_molecule</span><span class="p">(</span><span class="n">smiles_1</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">smiles_2</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+    <span class="sh">"""</span><span class="s">
+    Compare two SMILES strings using InChIKey.
+
+    Args:
+        smiles_1 (str): First input SMILES string.
+        smiles_2 (str): Second input SMILES string.
+
+    Returns:
+        bool: True if both SMILES strings are valid and have the same InChIKey, otherwise False.
+    </span><span class="sh">"""</span>
+    <span class="n">inchikey_1</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="bp">None</span> <span class="o">=</span> <span class="nf">get_inchikey</span><span class="p">(</span><span class="n">smiles_1</span><span class="p">)</span>
+    <span class="n">inchikey_2</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="bp">None</span> <span class="o">=</span> <span class="nf">get_inchikey</span><span class="p">(</span><span class="n">smiles_2</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">inchikey_1</span> <span class="ow">is</span> <span class="bp">None</span> <span class="ow">or</span> <span class="n">inchikey_2</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+        <span class="k">return</span> <span class="bp">False</span>
+
+    <span class="k">return</span> <span class="n">inchikey_1</span> <span class="o">==</span> <span class="n">inchikey_2</span>
+
+
+<span class="n">smiles_1</span> <span class="o">=</span> <span class="sh">"</span><span class="s">CCO</span><span class="sh">"</span>
+<span class="n">smiles_2</span> <span class="o">=</span> <span class="sh">"</span><span class="s">OCC</span><span class="sh">"</span>
+
+<span class="nf">print</span><span class="p">(</span><span class="nf">get_inchikey</span><span class="p">(</span><span class="n">smiles_1</span><span class="p">))</span>
+<span class="nf">print</span><span class="p">(</span><span class="nf">get_inchikey</span><span class="p">(</span><span class="n">smiles_2</span><span class="p">))</span>
+<span class="nf">print</span><span class="p">(</span><span class="nf">is_same_molecule</span><span class="p">(</span><span class="n">smiles_1</span><span class="p">,</span> <span class="n">smiles_2</span><span class="p">))</span>
+</code></pre></div></div> <p>위 예시에서 <code class="language-plaintext highlighter-rouge">"CCO"</code>와 <code class="language-plaintext highlighter-rouge">"OCC"</code>는 서로 다른 SMILES string이지만 같은 ethanol molecule을 나타낸다. 따라서 두 SMILES를 InChIKey로 변환하면 같은 값이 생성되고, <code class="language-plaintext highlighter-rouge">is_same_molecule()</code> 함수는 <code class="language-plaintext highlighter-rouge">True</code>를 반환한다.</p> <h2 id="canonical-smiles와-inchikey-비교">Canonical SMILES와 InChIKey 비교</h2> <p>동일 molecule 여부를 확인할 때는 canonical SMILES를 사용할 수도 있다. RDKit에서는 <code class="language-plaintext highlighter-rouge">Chem.MolToSmiles()</code>에 <code class="language-plaintext highlighter-rouge">canonical=True</code>를 지정하여 canonical SMILES를 생성할 수 있다.</p> <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="n">rdkit</span> <span class="kn">import</span> <span class="n">Chem</span>
+<span class="kn">from</span> <span class="n">rdkit.Chem.rdchem</span> <span class="kn">import</span> <span class="n">Mol</span>
+
+
+<span class="k">def</span> <span class="nf">get_canonical_smiles</span><span class="p">(</span><span class="n">smiles</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span> <span class="o">|</span> <span class="bp">None</span><span class="p">:</span>
+    <span class="sh">"""</span><span class="s">
+    Convert a SMILES string into a canonical SMILES string.
+
+    Args:
+        smiles (str): Input SMILES string.
+
+    Returns:
+        str | None: Canonical SMILES if the input SMILES is valid, otherwise None.
+    </span><span class="sh">"""</span>
+    <span class="n">mol</span><span class="p">:</span> <span class="n">Mol</span> <span class="o">|</span> <span class="bp">None</span> <span class="o">=</span> <span class="n">Chem</span><span class="p">.</span><span class="nc">MolFromSmiles</span><span class="p">(</span><span class="n">smiles</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">mol</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+        <span class="k">return</span> <span class="bp">None</span>
+
+    <span class="n">canonical_smiles</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">Chem</span><span class="p">.</span><span class="nc">MolToSmiles</span><span class="p">(</span>
+        <span class="n">mol</span><span class="p">,</span>
+        <span class="n">canonical</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span>
+        <span class="n">isomericSmiles</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span>
+    <span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">canonical_smiles</span>
+
+
+<span class="n">smiles_1</span> <span class="o">=</span> <span class="sh">"</span><span class="s">CCO</span><span class="sh">"</span>
+<span class="n">smiles_2</span> <span class="o">=</span> <span class="sh">"</span><span class="s">OCC</span><span class="sh">"</span>
+
+<span class="nf">print</span><span class="p">(</span><span class="nf">get_canonical_smiles</span><span class="p">(</span><span class="n">smiles_1</span><span class="p">))</span>
+<span class="nf">print</span><span class="p">(</span><span class="nf">get_canonical_smiles</span><span class="p">(</span><span class="n">smiles_2</span><span class="p">))</span>
+</code></pre></div></div> <p>Canonical SMILES와 InChIKey는 모두 molecule comparison에 사용할 수 있지만, 목적에 따라 적절히 선택해야 한다.</p> <table> <thead> <tr> <th>방법</th> <th>장점</th> <th>주의점</th> </tr> </thead> <tbody> <tr> <td>Canonical SMILES</td> <td>RDKit 내부에서 빠르게 생성 가능</td> <td>Toolkit과 option에 따라 결과가 달라질 수 있음</td> </tr> <tr> <td>InChIKey</td> <td>Fixed-length identifier로 database matching에 편리함</td> <td>Standardization 기준에 따라 결과 해석이 달라질 수 있음</td> </tr> </tbody> </table> <p>RDKit 내부 preprocessing이나 같은 환경에서의 duplicate checking에는 canonical SMILES가 유용하다. 반면 external database와 compound를 matching하거나, 서로 다른 source에서 수집한 molecule을 비교할 때는 InChIKey가 더 편리할 수 있다.</p> <h2 id="dataset에서-duplicate-molecule-확인">Dataset에서 Duplicate Molecule 확인</h2> <p>실제 Cheminformatics dataset에서는 같은 molecule이 서로 다른 SMILES로 여러 번 등장할 수 있다. 이 경우 InChIKey를 생성한 뒤 중복 여부를 확인할 수 있다.</p> <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="n">rdkit</span> <span class="kn">import</span> <span class="n">Chem</span>
+<span class="kn">from</span> <span class="n">rdkit.Chem.rdchem</span> <span class="kn">import</span> <span class="n">Mol</span>
+<span class="kn">import</span> <span class="n">pandas</span> <span class="k">as</span> <span class="n">pd</span>
+
+
+<span class="k">def</span> <span class="nf">get_inchikey</span><span class="p">(</span><span class="n">smiles</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span> <span class="o">|</span> <span class="bp">None</span><span class="p">:</span>
+    <span class="sh">"""</span><span class="s">
+    Convert a SMILES string into an InChIKey.
+
+    Args:
+        smiles (str): Input SMILES string.
+
+    Returns:
+        str | None: InChIKey if the input SMILES is valid, otherwise None.
+    </span><span class="sh">"""</span>
+    <span class="n">mol</span><span class="p">:</span> <span class="n">Mol</span> <span class="o">|</span> <span class="bp">None</span> <span class="o">=</span> <span class="n">Chem</span><span class="p">.</span><span class="nc">MolFromSmiles</span><span class="p">(</span><span class="n">smiles</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">mol</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+        <span class="k">return</span> <span class="bp">None</span>
+
+    <span class="n">inchikey</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">Chem</span><span class="p">.</span><span class="nc">MolToInchiKey</span><span class="p">(</span><span class="n">mol</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">inchikey</span>
+
+
+<span class="k">def</span> <span class="nf">add_inchikey_column</span><span class="p">(</span><span class="n">df</span><span class="p">:</span> <span class="n">pd</span><span class="p">.</span><span class="n">DataFrame</span><span class="p">,</span> <span class="n">smiles_col</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">pd</span><span class="p">.</span><span class="n">DataFrame</span><span class="p">:</span>
+    <span class="sh">"""</span><span class="s">
+    Add an InChIKey column to a DataFrame containing SMILES strings.
+
+    Args:
+        df (pd.DataFrame): Input DataFrame.
+        smiles_col (str): Column name containing SMILES strings.
+
+    Returns:
+        pd.DataFrame: DataFrame with an added InChIKey column.
+    </span><span class="sh">"""</span>
+    <span class="n">result_df</span><span class="p">:</span> <span class="n">pd</span><span class="p">.</span><span class="n">DataFrame</span> <span class="o">=</span> <span class="n">df</span><span class="p">.</span><span class="nf">copy</span><span class="p">()</span>
+    <span class="n">result_df</span><span class="p">[</span><span class="sh">"</span><span class="s">InChIKey</span><span class="sh">"</span><span class="p">]</span> <span class="o">=</span> <span class="n">result_df</span><span class="p">[</span><span class="n">smiles_col</span><span class="p">].</span><span class="nf">apply</span><span class="p">(</span><span class="n">get_inchikey</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">result_df</span>
+
+
+<span class="n">data</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="sh">"</span><span class="s">CompoundID</span><span class="sh">"</span><span class="p">:</span> <span class="p">[</span><span class="sh">"</span><span class="s">mol1</span><span class="sh">"</span><span class="p">,</span> <span class="sh">"</span><span class="s">mol2</span><span class="sh">"</span><span class="p">,</span> <span class="sh">"</span><span class="s">mol3</span><span class="sh">"</span><span class="p">],</span>
+    <span class="sh">"</span><span class="s">SMILES</span><span class="sh">"</span><span class="p">:</span> <span class="p">[</span><span class="sh">"</span><span class="s">CCO</span><span class="sh">"</span><span class="p">,</span> <span class="sh">"</span><span class="s">OCC</span><span class="sh">"</span><span class="p">,</span> <span class="sh">"</span><span class="s">CC(=O)Oc1ccccc1C(=O)O</span><span class="sh">"</span><span class="p">],</span>
+<span class="p">}</span>
+
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="nc">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+<span class="n">df</span> <span class="o">=</span> <span class="nf">add_inchikey_column</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">smiles_col</span><span class="o">=</span><span class="sh">"</span><span class="s">SMILES</span><span class="sh">"</span><span class="p">)</span>
+
+<span class="nf">print</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">.</span><span class="nf">duplicated</span><span class="p">(</span><span class="n">subset</span><span class="o">=</span><span class="p">[</span><span class="sh">"</span><span class="s">InChIKey</span><span class="sh">"</span><span class="p">],</span> <span class="n">keep</span><span class="o">=</span><span class="bp">False</span><span class="p">)])</span>
+</code></pre></div></div> <p>위 코드는 <code class="language-plaintext highlighter-rouge">SMILES</code> column을 가진 <code class="language-plaintext highlighter-rouge">DataFrame</code>에 <code class="language-plaintext highlighter-rouge">InChIKey</code> column을 추가한다. 이후 <code class="language-plaintext highlighter-rouge">duplicated()</code>를 사용하면 같은 InChIKey를 가진 molecule을 확인할 수 있다.</p> <p><code class="language-plaintext highlighter-rouge">mol1</code>과 <code class="language-plaintext highlighter-rouge">mol2</code>는 서로 다른 SMILES로 입력되었지만 같은 ethanol을 나타내므로 같은 InChIKey를 가진다. 따라서 InChIKey 기준 duplicate molecule로 확인된다.</p> <h2 id="inchikey-비교-시-주의점">InChIKey 비교 시 주의점</h2> <p>InChIKey 비교는 단순 SMILES string 비교보다 안정적이지만, 항상 모든 chemical equivalence 문제를 해결하는 것은 아니다. 특히 molecule standardization 기준에 따라 동일 여부 판단 결과가 달라질 수 있다.</p> <p>주의해야 할 대표적인 요소는 다음과 같다.</p> <table> <thead> <tr> <th>요소</th> <th>설명</th> </tr> </thead> <tbody> <tr> <td>Salt form</td> <td>같은 active compound라도 salt가 포함되면 identifier가 달라질 수 있음</td> </tr> <tr> <td>Protonation state</td> <td>pH나 charge state에 따라 structure 표현이 달라질 수 있음</td> </tr> <tr> <td>Tautomer</td> <td>같은 compound의 tautomeric form이 다른 identifier를 가질 수 있음</td> </tr> <tr> <td>Stereochemistry</td> <td>stereochemistry 유지 여부에 따라 같은 molecule 또는 다른 molecule로 판단될 수 있음</td> </tr> <tr> <td>Isotope</td> <td>isotope 정보가 포함되면 identifier가 달라질 수 있음</td> </tr> </tbody> </table> <p>따라서 large-scale dataset에서 duplicate molecule을 제거할 때는 InChIKey를 생성하기 전에 standardization rule을 먼저 정해야 한다. 예를 들어 salt removal, charge normalization, tautomer canonicalization, stereochemistry 유지 여부 등을 명확히 해야 한다.</p> <h2 id="summary">Summary</h2> <p>SMILES는 molecule structure를 표현하는 유용한 문자열 형식이지만, 같은 molecule도 여러 SMILES로 표현될 수 있다. 따라서 molecule의 동일 여부를 판단할 때 input SMILES string을 그대로 비교하는 것은 적절하지 않다.</p> <p>RDKit에서는 SMILES를 <code class="language-plaintext highlighter-rouge">Mol</code> object로 변환한 뒤 InChIKey를 생성할 수 있다. 두 SMILES의 InChIKey가 같으면 동일한 molecule structure를 나타낸다고 판단할 수 있다.</p> <p>Canonical SMILES도 동일 molecule 비교에 사용할 수 있지만, toolkit과 option에 따라 결과가 달라질 수 있다. InChIKey는 fixed-length identifier이므로 database matching과 duplicate checking에 유용하다.</p> <p>다만 InChIKey 비교 결과는 salt form, protonation state, tautomer, stereochemistry, isotope 정보에 영향을 받을 수 있다. 따라서 실제 dataset preprocessing에서는 standardization 기준을 먼저 정한 뒤 InChIKey를 생성하는 것이 중요하다.</p> <h2 id="references">References</h2> <ul> <li>RDKit Documentation. “Getting Started with the RDKit in Python.”</li> <li>RDKit Documentation. “rdkit.Chem.inchi module.”</li> </ul> </div> </article> </div> </div> </div> </div> <footer class="fixed-bottom" role="contentinfo"> <div class="container mt-0"> © Copyright 2026 Jin Hyuk Kim. Last updated: May 17, 2026. </div> </footer> <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script> <script src="/assets/js/bootstrap.bundle.min.js"></script> <script src="https://cdn.jsdelivr.net/npm/mdbootstrap@4.20.0/js/mdb.min.js" integrity="sha256-NdbiivsvWt7VYCt6hYNT3h/th9vSTL4EDWeGs5SN3DA=" crossorigin="anonymous"></script> <script defer src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha256-Nn1q/fx0H7SNLZMQ5Hw5JLaTRZp0yILA/FRexe19VdI=" crossorigin="anonymous"></script> <script defer src="https://cdn.jsdelivr.net/npm/imagesloaded@5.0.0/imagesloaded.pkgd.min.js" integrity="sha256-htrLFfZJ6v5udOG+3kNLINIKh2gvoKqwEhHYfTTMICc=" crossorigin="anonymous"></script> <script defer src="/assets/js/masonry.js?v=a0db7e5d5c70cc3252b3138b0c91dcaf" type="text/javascript"></script> <script defer src="https://cdn.jsdelivr.net/npm/medium-zoom@1.1.0/dist/medium-zoom.min.js" integrity="sha256-ZgMyDAIYDYGxbcpJcfUnYwNevG/xi9OHKaR/8GK+jWc=" crossorigin="anonymous"></script> <script defer src="/assets/js/zoom.js?v=85ddb88934d28b74e78031fd54cf8308"></script> <script defer src="/assets/js/bootstrap-toc.min.js?v=c82ff4de8b0955d6ff14f5b05eed7eb6"></script> <script defer src="https://cdn.jsdelivr.net/npm/bootstrap-table@1.22.4/dist/bootstrap-table.min.js" integrity="sha256-4rppopQE9POKfukn2kEvhJ9Um25Cf6+IDVkARD0xh78=" crossorigin="anonymous"></script> <script src="/assets/js/no_defer.js?v=2781658a0a2b13ed609542042a859126"></script> <script defer src="/assets/js/common.js?v=c15de51d4bb57887caa2c21988d97279"></script> <script defer src="/assets/js/copy_code.js?v=c8a01c11a92744d44b093fc3bda915df" type="text/javascript"></script> <script defer src="/assets/js/jupyter_new_tab.js?v=d9f17b6adc2311cbabd747f4538bb15f"></script> <script async src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script> <script async src="https://badge.dimensions.ai/badge.js"></script> <script defer type="text/javascript" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.js" integrity="sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI=" crossorigin="anonymous"></script> <script src="/assets/js/mathjax-setup.js?v=a5bb4e6a542c546dd929b24b8b236dfd"></script> <script defer src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6" crossorigin="anonymous"></script> <script defer src="/assets/js/progress-bar.js?v=2f30e0e6801ea8f5036fa66e1ab0a71a" type="text/javascript"></script> <script src="/assets/js/vanilla-back-to-top.min.js?v=f40d453793ff4f64e238e420181a1d17"></script> <script>
+    addBackToTop();
+  </script> </body> </html>

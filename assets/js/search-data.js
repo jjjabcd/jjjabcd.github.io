@@ -114,6 +114,17 @@ ninja.data = [{
             window.location.href = "/blog/2025/SynNet/";
           
         },
+      },{id: "post-inchikey를-이용한-동일-분자구조-비교",
+        
+          title: "InChIKey를 이용한 동일 분자구조 비교",
+        
+        description: "RDKit과 InChIKey를 이용한 동일 분자구조 비교",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2025/rdkit-check-smiles/";
+          
+        },
       },{id: "post-rdkit-기초",
         
           title: "RDKit 기초",
@@ -122,7 +133,7 @@ ninja.data = [{
         section: "Posts",
         handler: () => {
           
-            window.location.href = "/blog/2025/rdkit/";
+            window.location.href = "/blog/2025/rdkit-descriptors/";
           
         },
       },{id: "post-smiles-표기법",
