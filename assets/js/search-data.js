@@ -30,18 +30,7 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/cv/";
           },
-        },{id: "post-pytorch-입문-cpu-vs-gpu-버전-차이와-cuda-가능-여부-확인하기",
-        
-          title: "PyTorch 입문: CPU vs GPU 버전 차이와 CUDA 가능 여부 확인하기",
-        
-        description: "PyTorch의 CPU/GPU 버전 차이를 이해하고 CUDA 가능 여부를 확인하는 방법",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/blog/2026/pytorch/";
-          
-        },
-      },{id: "post-smiles-표기법",
+        },{id: "post-smiles-표기법",
         
           title: "SMILES 표기법",
         
@@ -50,6 +39,17 @@ ninja.data = [{
         handler: () => {
           
             window.location.href = "/blog/2025/smiles/";
+          
+        },
+      },{id: "post-pytorch-입문-cpu-vs-gpu-버전-차이와-cuda-가능-여부-확인하기",
+        
+          title: "PyTorch 입문: CPU vs GPU 버전 차이와 CUDA 가능 여부 확인하기",
+        
+        description: "PyTorch의 CPU/GPU 버전 차이를 이해하고 CUDA 가능 여부를 확인하는 방법",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2025/pytorch/";
           
         },
       },{id: "post-리눅스-명령어-정리",
@@ -72,6 +72,17 @@ ninja.data = [{
         handler: () => {
           
             window.location.href = "/blog/2025/jupyter/";
+          
+        },
+      },{id: "post-environment-yml-amp-requirements-txt-사용법",
+        
+          title: "environment.yml &amp; requirements.txt 사용법",
+        
+        description: "Conda 환경 설정을 위한 environment.yml 파일과 pip 패키지 관리를 위한 requirements.txt 활용 가이드",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2025/conda-env-file/";
           
         },
       },{id: "post-conda-가상환경에-라이브러리-설치",
