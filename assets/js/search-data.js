@@ -37,7 +37,95 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/cv/";
           },
-        },{id: "post-smiles-표기법",
+        },{id: "post-rxnflow-generative-flows-on-synthetic-pathway-for-drug-design",
+        
+          title: "RxnFlow: Generative Flows on Synthetic Pathway for Drug Design",
+        
+        description: "RxnFlow: Generative Flows on Synthetic Pathway for Drug Design 리뷰",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2025/RxnFlow/";
+          
+        },
+      },{id: "post-rgfn-synthesizable-molecular-generation-using-gflownets",
+        
+          title: "RGFN: Synthesizable Molecular Generation Using GFlowNets",
+        
+        description: "RGFN: Synthesizable Molecular Generation Using GFlowNets 리뷰",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2025/RGFN/";
+          
+        },
+      },{id: "post-multi-objective-gflownets",
+        
+          title: "Multi-Objective GFlowNets",
+        
+        description: "Pareto optimal하면서도 diverse한 candidate를 생성하는 Multi-Objective GFlowNet 정리",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2025/MOGFN/";
+          
+        },
+      },{id: "post-gflownet-flow-network-based-generative-models-for-non-iterative-diverse-candidate-generation",
+        
+          title: "GFlowNet: Flow Network based Generative Models for Non-Iterative Diverse Candidate Generation",
+        
+        description: "GFlowNet 논문 리뷰",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2025/GFlowNet/";
+          
+        },
+      },{id: "post-sparrow-an-algorithmic-framework-for-synthetic-cost-aware-decision-making-in-molecular-design",
+        
+          title: "SPARROW: An algorithmic framework for synthetic cost-aware decision making in molecular design",
+        
+        description: "Synthetic cost와 information gain을 동시에 고려하여 molecular design cycle에서 후보 분자와 합성 경로를 선택하는 graph-based optimization framework SPARROW 논문 리뷰",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2025/SPARROW/";
+          
+        },
+      },{id: "post-syn-molopt-a-synthesis-planning-driven-molecular-optimization-method-using-data-derived-functional-reaction-templates",
+        
+          title: "Syn-MolOpt: A Synthesis Planning-Driven Molecular Optimization Method Using Data-Derived Functional Reaction Templates",
+        
+        description: "Synthesis planning을 통합한 molecular optimization framework Syn-MolOpt 논문 리뷰",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2025/Syn-MolOpt/";
+          
+        },
+      },{id: "post-amortized-tree-generation-for-bottom-up-synthesis-planning-and-synthesizable-molecular-design",
+        
+          title: "Amortized Tree Generation for Bottom-Up Synthesis Planning and Synthesizable Molecular Design",
+        
+        description: "Bottom-up 방식으로 synthetic tree를 생성하여 synthesis planning과 synthesizable molecular design을 동시에 해결하는 amortized 접근법을 제안하는 ICLR 2022 논문 리뷰",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2025/SynNet/";
+          
+        },
+      },{id: "post-rdkit-기초",
+        
+          title: "RDKit 기초",
+        
+        description: "RDKit 사용법 기초",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2025/rdkit/";
+          
+        },
+      },{id: "post-smiles-표기법",
         
           title: "SMILES 표기법",
         
@@ -114,6 +202,28 @@ ninja.data = [{
             window.location.href = "/blog/2025/conda-install/";
           
         },
+      },{id: "post-mothra-multi-objective-de-novo-molecular-generation-using-monte-carlo-tree-search",
+        
+          title: "Mothra: Multi-objective de novo Molecular Generation Using Monte Carlo Tree Search",
+        
+        description: "Pareto Monte Carlo Tree Search 기반 multi-objective de novo molecular generation model인 Mothra 리뷰",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2025/Mothra/";
+          
+        },
+      },{id: "post-chemmort-an-automatic-admet-optimization-platform-using-deep-learning-and-multi-objective-particle-swarm-optimization",
+        
+          title: "ChemMORT: an automatic ADMET optimization platform using deep learning and multi-objective particle swarm...",
+        
+        description: "ChemMORT: an automatic ADMET optimization platform using deep learning and multi-objective particle swarm optimization 리뷰",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2025/ChemMORT/";
+          
+        },
       },{id: "post-multi-objective-latent-space-optimization-of-generative-molecular-design-models",
         
           title: "Multi-objective latent space optimization of generative molecular design models",
@@ -122,7 +232,51 @@ ninja.data = [{
         section: "Posts",
         handler: () => {
           
-            window.location.href = "/blog/2025/molso/";
+            window.location.href = "/blog/2025/MO-LSO/";
+          
+        },
+      },{id: "post-proximal-policy-optimization",
+        
+          title: "Proximal Policy Optimization",
+        
+        description: "Proximal Policy Optimization의 기본 개념과 clipped surrogate objective",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2024/rl-ppo/";
+          
+        },
+      },{id: "post-actor-critic-a2c",
+        
+          title: "Actor-Critic: A2C",
+        
+        description: "Actor-Critic: A2C의 기본 개념과 학습 과정",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2024/rl-a2c/";
+          
+        },
+      },{id: "post-deep-q-network",
+        
+          title: "Deep Q-Network",
+        
+        description: "Deep Q-Network의 기본 개념과 학습 과정",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2024/rl-dqn/";
+          
+        },
+      },{id: "post-reinforce-algorithm",
+        
+          title: "REINFORCE Algorithm",
+        
+        description: "REINFORCE algorithm과 REINFORCE with baseline 정리",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2024/rl-reinforce/";
           
         },
       },{id: "post-reinforcement-learning-기초-개념-2-algorithm-types",
