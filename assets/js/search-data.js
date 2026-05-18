@@ -37,7 +37,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/cv/";
           },
-        },{id: "post-rxnflow-generative-flows-on-synthetic-pathway-for-drug-design",
+        },{id: "post-chembl-database-설치-및-postgresql-복원-가이드",
+        
+          title: "ChEMBL Database 설치 및 PostgreSQL 복원 가이드",
+        
+        description: "PostgreSQL 기반의 ChEMBL 데이터베이스를 다운로드하고 로컬 서버에 설치 및 복원(Restore)하는 방법 정리",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2025/chembl-install/";
+          
+        },
+      },{id: "post-rxnflow-generative-flows-on-synthetic-pathway-for-drug-design",
         
           title: "RxnFlow: Generative Flows on Synthetic Pathway for Drug Design",
         
