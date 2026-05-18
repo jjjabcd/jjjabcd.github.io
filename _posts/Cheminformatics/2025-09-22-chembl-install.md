@@ -35,7 +35,7 @@ PostgreSQL의 복원 명령어인 `pg_restore`를 실행할 때, 데이터베이
 
 ```bash
 # 압축 해제된 dmp 파일을 /tmp/ 경로로 이동
-# ('/path/to/custom_path' 부분은 본인의 실제 작업 환경에 맞는 상위 디렉토리 경로로 대체합니다.)
+# ('/path/to/custom_path' 부분은 본인의 실제 작업 환경에 맞는 상위 디렉토리 경로로 대체해야 한다.)
 mv /path/to/custom_path/chembl_36_postgresql/chembl_36_postgresql.dmp /tmp/
 ```
 
@@ -57,6 +57,6 @@ sudo -u postgres pg_restore --verbose -d chembl_36 /tmp/chembl_36_postgresql.dmp
 
 ### 참고 자료
 
-- [ChEMBL](https://chembl.github.io/chembl-postgresql/)
-- [Downloads | ChEMBL Interface Documentation](https://chembl.gitbook.io/chembl-interface-documentation/downloads)
+- [ChEMBL PostgreSQL](https://chembl.github.io/chembl-postgresql/)
+- [Downloads &#124; ChEMBL Interface Documentation](https://chembl.gitbook.io/chembl-interface-documentation/downloads)
 - [Index of /pub/databases/chembl/ChEMBLdb/latest](https://ftp.ebi.ac.uk/pub/databases/chembl/ChEMBLdb/latest/)
