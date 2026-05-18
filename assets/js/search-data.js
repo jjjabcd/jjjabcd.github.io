@@ -136,6 +136,17 @@ ninja.data = [{
             window.location.href = "/blog/2025/rdkit-descriptors/";
           
         },
+      },{id: "post-ubuntu-하드웨어-모니터링-cpu-gpu-ram-disk-상태-확인-및-실시간-점검-가이드",
+        
+          title: "Ubuntu 하드웨어 모니터링: CPU, GPU, RAM, Disk 상태 확인 및 실시간 점검 가이드...",
+        
+        description: "AI 모델 학습 및 대용량 작업 수행 시 Ubuntu 서버의 CPU, GPU, RAM, Disk 하드웨어 상태를 모니터링하는 명령어 총정리",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2025/linux-monitor/";
+          
+        },
       },{id: "post-smiles-표기법",
         
           title: "SMILES 표기법",
