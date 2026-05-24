@@ -5,7 +5,9 @@ description: 분자 구조 이미지 인식을 통한 분자구조 정보 검색
 img: assets/project/CanChem/slide_1.png
 importance: 1
 category: work
-related_publications: true
+related_publications: false
+toc:
+  sidebar: left
 ---
 
 ### 📔 프로젝트 소개
