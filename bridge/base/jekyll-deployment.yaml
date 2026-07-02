@@ -1,0 +1,44 @@
+#! jekyll-deployment.yaml
+# Generated code, do not edit
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+    name: jekyll
+    namespace: jjjabcdgithubio
+    labels:
+        com.docker.compose.project: jjjabcdgithubio
+        com.docker.compose.service: jekyll
+spec:
+    replicas: 1
+    selector:
+        matchLabels:
+            com.docker.compose.project: jjjabcdgithubio
+            com.docker.compose.service: jekyll
+    strategy:
+        type: Recreate
+    template:
+        metadata:
+            labels:
+                com.docker.compose.project: jjjabcdgithubio
+                com.docker.compose.service: jekyll
+                com.docker.compose.network.default: "true"
+        spec:
+            containers:
+                - name: jekyll
+                  image: amirpourmand/al-folio:v0.16.3
+                  imagePullPolicy: IfNotPresent
+                  env:
+                    - name: JEKYLL_ENV
+                      value: "development"
+                  ports:
+                    - name: jekyll-8080
+                      containerPort: 8080
+                    - name: jekyll-35729
+                      containerPort: 35729
+                  volumeMounts:
+                    - name: srv-jekyll
+                      mountPath: /srv/jekyll
+            volumes:
+                - name: srv-jekyll
+                  hostPath:
+                    path: C:\Users\rlawl\Desktop\Code\jjjabcd.github.io

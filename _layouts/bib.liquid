@@ -84,7 +84,6 @@
           {% if forloop.first == false -%}
             {%- if forloop.length > 2 %}, {% elsif forloop.length == 2 %}  {% endif %}
           {%- endif %}
-          {%- if forloop.last %}and {% endif -%}
         {% endif %}
         {%- if author_is_self -%}
           <strong
@@ -151,7 +150,7 @@
       <span>
         {{- entrytype -}}
         {%- if entry.month %}, {{ entry.month }}{% endif -%}
-        {%- if entry.note %}: ({{ entry.note }}){% endif -%}
+        {%- if entry.note %}{% if entrytype != '' or entry.month %}, {% endif %}{{ entry.note }}{% endif -%}
       </span>
       {% if entry.year -%}
         <span class="entry-year">{{ entry.year }}</span>
@@ -162,7 +161,7 @@
     <div class="links">
       {% if entry.award %}
         <a class="award btn btn-sm z-depth-0" role="button">
-          {%- if entry.award_name %}{{ entry.award_name }}{% else %}Awarded{% endif -%}
+          {%- if entry.award_name %}{{ entry.award_name }}{% else %}{{ entry.award }}{% endif -%}
         </a>
       {% endif %}
       {% if entry.abstract %}
@@ -335,7 +334,7 @@
 
     {% if entry.award %}
       <!-- Hidden Award block -->
-      <div class="award hidden d-print-inline">
+      <div class="award d-none d-print-inline">
         <p>{{ entry.award | markdownify }}</p>
       </div>
     {% endif %}

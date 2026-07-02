@@ -1,8 +1,8 @@
 ---
 layout: default
 permalink: /blog/
-title: blog
-nav: true
+title: blog(KR)
+nav: false
 nav_order: 2
 pagination:
   enabled: true

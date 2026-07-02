@@ -10,7 +10,7 @@ order: 1
 <!-- _pages/publications.md -->
 <div class="publications">
 
-  <p class="text-muted" style="font-size: 0.8rem; font-style: italic;">† Equal contribution * Corresponding author</p>
+  <p class="text-muted" style="font-size: 0.8rem; font-style: italic;">* Corresponding author</p>
 
   <!-- Category Navigation -->
   <div class="d-wrap justify-content-center mb-4">
@@ -23,11 +23,11 @@ order: 1
   <h2 id="int-journal" class="category">International Journal</h2>
   {% bibliography -f papers -q @*[category=int-journal]* %}
 
-  <h2 id="dom-journal" class="category">Domestic Journal</h2>
-  {% bibliography -f papers -q @*[category=dom-journal]* %}
-
   <h2 id="int-conference" class="category">International Conference</h2>
   {% bibliography -f papers -q @*[category=int-conference]* %}
+
+  <h2 id="dom-journal" class="category">Domestic Journal</h2>
+  {% bibliography -f papers -q @*[category=dom-journal]* %}
 
   <h2 id="dom-conference" class="category">Domestic Conference</h2>
   {% bibliography -f papers -q @*[category=dom-conference]* %}

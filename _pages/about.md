@@ -32,9 +32,9 @@ Hi, I’m Jin Hyuk Kim(pronounced '김진혁'), a M.S. student in Computer Scien
 
 I am a member of the [AI-Powered Cheminformatics Laboratory](https://sites.google.com/view/hallym-apclab/home?authuser=0), where I conduct research on applying artificial intelligence to scientific problems.
 
-My research focuses on AI4Science, particularly in drug discovery, with an emphasis on multi-modal representation learning, explainable AI, and uncertainty-aware modeling.
+My current research focuses on AI4Science, particularly AI-driven drug discovery. I am especially interested in developing Agentic AI systems for molecular generation and multi-objective molecular optimization, as well as applying multi-modal representation learning and explainable AI to molecular applications.
 
-**Research Interests:** AI4Science (Chemistry), Drug Discovery, Multi-modal Representation Learning, Explainable AI, Multi-Objective Optimization, Molecular Generation
+Research Interests: AI4Science (Chemistry), AI-driven Drug Discovery, Agentic AI, Molecular Generation, Multi-Objective Molecular Optimization, Multi-modal Representation Learning, Explainable AI
 
 <!-- Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](https://www.reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
 
