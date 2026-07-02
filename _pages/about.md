@@ -28,13 +28,24 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-Hi, I’m Jin Hyuk Kim(pronounced '김진혁'), a M.S. student in Computer Science at Hallym University, advised by [Prof. Jonghwan Choi](https://sites.google.com/view/hallym-apclab/pi?authuser=0).
+Hi, I’m Jin Hyuk Kim, an M.S. student in Computer Engineering at Hallym University, advised by [Prof. Jonghwan Choi](https://sites.google.com/view/hallym-apclab/pi?authuser=0).
 
-I am a member of the [AI-Powered Cheminformatics Laboratory](https://sites.google.com/view/hallym-apclab/home?authuser=0), where I conduct research on applying artificial intelligence to scientific problems.
+I am a member of the [AI-Powered Cheminformatics Laboratory](https://sites.google.com/view/hallym-apclab/home?authuser=0), where I develop artificial intelligence approaches for drug discovery.
 
-My current research focuses on AI4Science, particularly AI-driven drug discovery. I am especially interested in developing Agentic AI systems for molecular generation and multi-objective molecular optimization, as well as applying multi-modal representation learning and explainable AI to molecular applications.
+My current research focuses on Agentic AI for molecular generation and multi-objective molecular optimization. In particular, I study how specialized molecular models can be dynamically selected and coordinated to solve complex molecular design problems.
 
-Research Interests: AI4Science (Chemistry), AI-driven Drug Discovery, Agentic AI, Molecular Generation, Multi-Objective Molecular Optimization, Multi-modal Representation Learning, Explainable AI
+My broader research interests include:
+- AI4Science
+  - Chemistry
+  - Drug Discovery
+- Agentic AI for Molecular Design
+  - Synthesizable Molecular Generation
+  - Multi-Objective Molecular Optimization
+  - Planning and Routing
+- Molecular Representation Learning
+  - Multi-modal Fusion
+  - Adaptive Fusion
+- Explainable/Interpretable AI
 
 <!-- Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](https://www.reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
 

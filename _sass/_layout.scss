@@ -35,10 +35,10 @@ body.sticky-bottom-footer {
 
 // Profile
 .profile {
-  margin-top: -120px;
+  margin-top: -100px;
 
   @media (max-width: 576px) {
-    margin-top: 0;
+    margin-top: 0.25rem;
   }
 
   img {
