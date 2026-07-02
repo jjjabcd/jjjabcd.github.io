@@ -1,0 +1,25 @@
+# check if there is at least one published port
+
+#! jekyll-service.yaml
+# Generated code, do not edit
+apiVersion: v1
+kind: Service
+metadata:
+    name: jekyll-published
+    namespace: jjjabcdgithubio
+    labels:
+        com.docker.compose.project: jjjabcdgithubio
+        com.docker.compose.service: jekyll
+spec:
+    selector:
+        com.docker.compose.project: jjjabcdgithubio
+        com.docker.compose.service: jekyll
+    ports:
+        - name: jekyll-8080
+          port: 8080
+          protocol: TCP
+          targetPort: jekyll-8080
+        - name: jekyll-35729
+          port: 35729
+          protocol: TCP
+          targetPort: jekyll-35729

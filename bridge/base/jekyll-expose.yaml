@@ -1,0 +1,21 @@
+#! jekyll-expose.yaml
+# Generated code, do not edit
+apiVersion: v1
+kind: Service
+metadata:
+    name: jekyll
+    namespace: jjjabcdgithubio
+    labels:
+        com.docker.compose.project: jjjabcdgithubio
+        com.docker.compose.service: jekyll
+spec:
+    selector:
+        com.docker.compose.project: jjjabcdgithubio
+        com.docker.compose.service: jekyll
+    ports:
+        - name: jekyll-8080
+          port: 8080
+          targetPort: jekyll-8080
+        - name: jekyll-35729
+          port: 35729
+          targetPort: jekyll-35729
