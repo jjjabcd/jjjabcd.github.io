@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: Master Student
+subtitle: M.S. Candidate
 navbar: false
 
 profile:
