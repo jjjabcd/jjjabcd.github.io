@@ -30,7 +30,29 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/cv/";
           },
-        },{id: "post-chembl-database-설치-및-postgresql-복원-가이드",
+        },{id: "post-huggingface-token-등록",
+        
+          title: "Huggingface token 등록",
+        
+        description: "Opensource LLM을 사용하기 위한 hugging face 설정법",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/linux-huggingface/";
+          
+        },
+      },{id: "post-autodock-설치-가이드-1-2",
+        
+          title: "AutoDock 설치 가이드 (1/2)",
+        
+        description: "Docking simulation tool 사용법",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/dock-autodock/";
+          
+        },
+      },{id: "post-chembl-database-설치-및-postgresql-복원-가이드",
         
           title: "ChEMBL Database 설치 및 PostgreSQL 복원 가이드",
         
