@@ -1,4 +1,5 @@
 ---
+published: false
 layout: post
 title: "Huggingface token 등록"
 date: 2026-06-11

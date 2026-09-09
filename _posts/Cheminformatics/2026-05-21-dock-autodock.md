@@ -1,4 +1,5 @@
 ---
+published: false
 layout: post
 title: "AutoDock 설치 가이드 (1/2)"
 date: 2026-05-21

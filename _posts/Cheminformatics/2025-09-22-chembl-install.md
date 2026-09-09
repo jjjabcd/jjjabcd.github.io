@@ -1,4 +1,5 @@
 ---
+published: false
 layout: post
 title: "ChEMBL Database 설치 및 PostgreSQL 복원 가이드"
 date: 2025-09-22
