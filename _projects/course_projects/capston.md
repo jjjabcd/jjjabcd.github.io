@@ -6,6 +6,13 @@ img: assets/project/CanChem/slide_1.png
 importance: 1
 categories: [Course Projects]
 related_publications: false
+links:
+  - label: Slides
+    url: /assets/pdf/projects/capston/slides.pdf
+  - label: Video
+    url: https://youtube.com/shorts/CHp-tC4oYMQ
+tags:
+  - KR
 toc:
   sidebar: left
 ---
@@ -123,18 +130,4 @@ Optical Chemical Structure Recognition(OCSR) 모델의 성능 향상을 위해 D
 </div>
 <div class="caption">
     왼쪽부터: 분자 정보 상세 페이지, 즐겨찾기 페이지, 검색 기록 관리
-</div>
-
----
-
-### 📊 결과 보고서 (Slides)
-
-<div class="row row-cols-1 row-cols-md-2">
-    {% for i in (1..28) %}
-    <div class="col mb-4">
-        {% capture slide_path %}assets/project/CanChem/slide_{{ i }}.png{% endcapture %}
-        {% capture slide_title %}Slide {{ i }}{% endcapture %}
-        {% include figure.liquid path=slide_path title=slide_title class="img-fluid rounded z-depth-1" %}
-    </div>
-    {% endfor %}
 </div>

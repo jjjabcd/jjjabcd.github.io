@@ -2,17 +2,29 @@
 layout: page
 title: projects
 permalink: /projects/
-description: A collection of your cool projects.
+description: Papers, course projects, and side projects I've worked on.
 nav: true
 nav_order: 3
-display_categories: [Research, Course Projects, Side Projects]
-horizontal: false
+display_categories: [Research, Side Projects, Course Projects]
+horizontal: true
+_styles: >
+  .post-title {
+    text-transform: capitalize;
+  }
 ---
 
 <!-- pages/projects.md -->
 <div class="projects">
 {% if site.enable_project_categories and page.display_categories %}
   <!-- Display categorized projects -->
+
+  <!-- Category Navigation -->
+  <div class="d-wrap justify-content-center mb-4">
+    {% for category in page.display_categories %}
+      <a href="#{{ category | slugify }}" class="btn btn-sm btn-outline-primary rounded-pill m-1">{{ category }}</a>
+    {% endfor %}
+  </div>
+
   {% for category in page.display_categories %}
   <a id="{{ category | slugify }}" href=".#{{ category | slugify }}">
     <h2 class="category">{{ category }}</h2>
@@ -22,7 +34,7 @@ horizontal: false
   <!-- Generate cards for each project -->
   {% if page.horizontal %}
   <div class="container">
-    <div class="row row-cols-1 row-cols-md-2">
+    <div class="row row-cols-1">
     {% for project in sorted_projects %}
       {% include projects_horizontal.liquid %}
     {% endfor %}
@@ -48,7 +60,7 @@ horizontal: false
 {% if page.horizontal %}
 
   <div class="container">
-    <div class="row row-cols-1 row-cols-md-2">
+    <div class="row row-cols-1">
     {% for project in sorted_projects %}
       {% include projects_horizontal.liquid %}
     {% endfor %}
