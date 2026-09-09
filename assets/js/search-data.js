@@ -367,6 +367,11 @@ ninja.data = [{
           description: "OCSAug: Diffusion-based Optical Chemical Structure Data Augmentation for Improved Hand-drawn Chemical Structure Image Recognition",
           section: "Projects",handler: () => {
               window.location.href = "/projects/research/international/ocsaug/";
+            },},{id: "projects-retrosynthesis-explorer",
+          title: 'Retrosynthesis Explorer',
+          description: "A local browser GUI for retrosynthetic route exploration with AiZynthFinder",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/side_projects/retrosynthesis-explorer/";
             },},{id: "teachings-data-science-fundamentals",
           title: 'Data Science Fundamentals',
           description: "This course covers the foundational aspects of data science, including data collection, cleaning, analysis, and visualization. Students will learn practical skills for working with real-world datasets.",
