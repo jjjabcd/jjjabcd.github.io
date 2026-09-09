@@ -16,9 +16,16 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/publications/";
           },
+        },{id: "nav-blog-kr",
+          title: "blog(KR)",
+          description: "",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/blog/";
+          },
         },{id: "nav-projects",
           title: "projects",
-          description: "A collection of your cool projects.",
+          description: "Papers, course projects, and side projects I&#39;ve worked on.",
           section: "Navigation",
           handler: () => {
             window.location.href = "/projects/";
@@ -30,40 +37,7 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/cv/";
           },
-        },{id: "post-huggingface-token-등록",
-        
-          title: "Huggingface token 등록",
-        
-        description: "Opensource LLM을 사용하기 위한 hugging face 설정법",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/blog/2026/linux-huggingface/";
-          
-        },
-      },{id: "post-autodock-설치-가이드-1-2",
-        
-          title: "AutoDock 설치 가이드 (1/2)",
-        
-        description: "Docking simulation tool 사용법",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/blog/2026/dock-autodock/";
-          
-        },
-      },{id: "post-chembl-database-설치-및-postgresql-복원-가이드",
-        
-          title: "ChEMBL Database 설치 및 PostgreSQL 복원 가이드",
-        
-        description: "PostgreSQL 기반의 ChEMBL 데이터베이스를 다운로드하고 로컬 서버에 설치 및 복원(Restore)하는 방법 정리",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/blog/2025/chembl-install/";
-          
-        },
-      },{id: "post-rxnflow-generative-flows-on-synthetic-pathway-for-drug-design",
+        },{id: "post-rxnflow-generative-flows-on-synthetic-pathway-for-drug-design",
         
           title: "RxnFlow: Generative Flows on Synthetic Pathway for Drug Design",
         
@@ -372,7 +346,27 @@ ninja.data = [{
           title: 'CanChem',
           description: "분자 구조 이미지 인식을 통한 분자구조 정보 검색 앱",
           section: "Projects",handler: () => {
-              window.location.href = "/projects/1_project/";
+              window.location.href = "/projects/course_projects/capston/";
+            },},{id: "projects-ask2024",
+          title: 'ASK2024',
+          description: "DDPM 기반 데이터 증강과 준지도학습을 결합해 OCSR(광학 분자구조 인식) 성능 향상 연구",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/research/domestic/ask2024/";
+            },},{id: "projects-cue",
+          title: 'CUE',
+          description: "CUE: A Chemical Uncertainty-Aware Embedding Framework for Multi-modal Drug Selectivity Prediction",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/research/international/cue/";
+            },},{id: "projects-morse",
+          title: 'MORSE',
+          description: "Agentic Multi-objective Molecular Optimization via Dynamic Routing of Property-specific Editor Networks",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/research/international/morse/";
+            },},{id: "projects-ocsaug",
+          title: 'OCSAug',
+          description: "OCSAug: Diffusion-based Optical Chemical Structure Data Augmentation for Improved Hand-drawn Chemical Structure Image Recognition",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/research/international/ocsaug/";
             },},{id: "teachings-data-science-fundamentals",
           title: 'Data Science Fundamentals',
           description: "This course covers the foundational aspects of data science, including data collection, cleaning, analysis, and visualization. Students will learn practical skills for working with real-world datasets.",
