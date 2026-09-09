@@ -160,6 +160,51 @@ ul.task-list input[type="checkbox"] {
     margin-bottom: 1rem;
     text-align: right;
   }
+
+  .project-title-link {
+    text-decoration: none;
+  }
+
+  .project-tags {
+    margin-top: 0.5rem;
+
+    &.project-tags-meta {
+      margin-top: 0.35rem;
+    }
+
+    .tag {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 3px 12px;
+      margin: 0 6px 6px 0;
+      border-radius: 999px;
+      border: 1px solid var(--global-theme-color);
+      color: var(--global-theme-color) !important;
+      text-decoration: none !important;
+      transition: background-color 0.2s ease, color 0.2s ease;
+
+      i {
+        margin-right: 4px;
+      }
+
+      &:hover {
+        background-color: var(--global-theme-color);
+        color: var(--global-card-bg-color) !important;
+      }
+    }
+
+    .tag-static {
+      border: 1px solid var(--global-divider-color);
+      color: var(--global-text-color-light) !important;
+      cursor: default;
+
+      &:hover {
+        background-color: transparent;
+        color: var(--global-text-color-light) !important;
+      }
+    }
+  }
 }
 
 // Repositories

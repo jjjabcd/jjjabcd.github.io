@@ -1,11 +1,11 @@
 .category {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid var(--global-divider-color);
   padding-bottom: 8px;
   margin-top: 40px;
   margin-bottom: 20px;
   font-weight: 400;
   font-size: 1.5rem;
-  color: #fff;
+  color: var(--global-text-color);
 }
 
 .periodical {
@@ -23,12 +23,12 @@
     border-radius: 20px;
     padding: 5px 15px;
     font-size: 0.9rem;
-    border: 1px solid #4a4a4a !important;
-    color: #888 !important;
+    border: 1px solid var(--global-divider-color) !important;
+    color: var(--global-text-color-light) !important;
 
     &:hover {
-      color: #007bff !important;
-      border-color: #007bff !important;
+      color: var(--global-theme-color) !important;
+      border-color: var(--global-theme-color) !important;
     }
   }
 
@@ -37,9 +37,9 @@
       display: inline-block !important;
       white-space: normal !important;
       word-break: break-word !important;
-      border: 1px solid #007bff !important;
+      border: 1px solid var(--global-theme-color) !important;
       background: transparent !important;
-      color: #007bff !important;
+      color: var(--global-theme-color) !important;
       border-radius: 5px !important;
       padding: 2px 8px !important;
       font-size: 0.7rem !important;
@@ -51,8 +51,8 @@
 
   .links {
     .btn {
-      border: 1px solid #fff !important;
-      color: #fff !important;
+      border: 1px solid var(--global-text-color) !important;
+      color: var(--global-text-color) !important;
       background: transparent !important;
       text-transform: none;
       font-size: 0.75rem;
@@ -60,7 +60,21 @@
       margin-right: 5px;
 
       &:hover {
-        background: rgba(255, 255, 255, 0.1) !important;
+        background: var(--global-divider-color) !important;
+      }
+    }
+
+    // Actual navigational links (PDF, Code, Project, DOI, etc.) get the theme
+    // accent color so they read as clickable, distinct from static badges
+    // like the award ribbon.
+    .btn.link-btn {
+      border: 1px solid var(--global-theme-color) !important;
+      color: var(--global-theme-color) !important;
+      background: transparent !important;
+
+      &:hover {
+        background: var(--global-theme-color) !important;
+        color: #fff !important;
       }
     }
   }
