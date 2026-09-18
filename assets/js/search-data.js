@@ -340,13 +340,13 @@ ninja.data = [{
           section: "Books",handler: () => {
               window.location.href = "/books/the_godfather/";
             },},{id: "news-ocsaug-diffusion-based-optical-chemical-structure-data-augmentation-for-improved-hand-drawn-chemical-structure-image-recognition-has-been-published-in-the-journal-of-supercomputing",
-          title: '“OCSAug: Diffusion-based Optical Chemical Structure Data Augmentation for Improved Hand-drawn Chemical Structure Image...',
+          title: '”OCSAug: Diffusion-based Optical Chemical Structure Data Augmentation for Improved Hand-drawn Chemical Structure Image...',
           description: "",
           section: "News",},{id: "news-one-paper-accepted-at-ai4sci-korea-2026",
           title: 'One paper accepted at AI4Sci Korea 2026.',
           description: "",
-          section: "News",},{id: "news-cue-a-chemical-uncertainty-aware-embedding-framework-for-multimodal-drug-selectivity-prediction-has-been-published-in-journal-of-chemical-information-and-modeling-jcim-paper",
-          title: '“CUE: A Chemical Uncertainty-Aware Embedding Framework for Multimodal Drug Selectivity Prediction” has been...',
+          section: "News",},{id: "news-cue-a-chemical-uncertainty-aware-embedding-framework-for-multimodal-drug-selectivity-prediction-has-been-published-in-journal-of-chemical-information-and-modeling-jcim",
+          title: '”CUE: A Chemical Uncertainty-Aware Embedding Framework for Multimodal Drug Selectivity Prediction” has been...',
           description: "",
           section: "News",},{id: "projects-canchem",
           title: 'CanChem',
