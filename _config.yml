@@ -89,8 +89,7 @@ bing_site_verification: # out your bing-site-verification ID (Bing Webmaster)
 
 blog_name: Jin's Study Log # blog_name will be displayed in your blog page
 blog_description: >
-  Paper Review & Environment Setting & ML/DL Theory Study <br>
-  카테고리를 통해 비슷한 주제의 글들을 모아볼 수 있습니다.
+  Paper Review & Environment Setting & ML/DL Theory Study
 permalink: /blog/:year/:title/
 lsi: false # produce an index for related posts
 
