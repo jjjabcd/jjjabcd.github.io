@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-[One paper accepted at AI4Sci Korea 2026.](/publications/)
+[One paper accepted at AI4Sci Korea 2026.](/publications/#int-conference)
