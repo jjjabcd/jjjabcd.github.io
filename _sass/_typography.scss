@@ -64,6 +64,24 @@ table.table a {
   }
 }
 
+// News list: bold titles wrap an <a>, but the global "strong" color rule
+// above would otherwise override the inherited link color, and links in
+// this table have no underline by default (unlike hover elsewhere). Force
+// both explicitly so linked news items read as links.
+.news a {
+  color: var(--global-theme-color);
+  text-decoration: underline;
+
+  strong,
+  em {
+    color: inherit;
+  }
+
+  &:hover {
+    color: var(--global-theme-color);
+  }
+}
+
 .table-dark {
   background-color: transparent;
 
