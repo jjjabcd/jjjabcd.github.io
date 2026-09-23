@@ -360,7 +360,7 @@ ninja.data = [{
               window.location.href = "/projects/research/domestic/ask2024/";
             },},{id: "projects-cue",
           title: 'CUE',
-          description: "CUE: A Chemical Uncertainty-Aware Embedding Framework for Multi-modal Drug Selectivity Prediction",
+          description: "CUE: A Chemical Uncertainty-Aware Embedding Framework for Multimodal Drug Selectivity Prediction",
           section: "Projects",handler: () => {
               window.location.href = "/projects/research/international/cue/";
             },},{id: "projects-morse",
