@@ -152,7 +152,7 @@ cv:
     Interests:
       - name: Research Interests
         icon: fa-solid fa-flask
-        keywords: "AI4Science (Chemistry), Drug Discovery, Multi-modal Representation Learning, Explainable AI, Multi-Objective Optimization, Molecular Generation"
+        keywords: "AI4Science (Chemistry, Drug Discovery & Biology), Molecular Generation & Optimization, Agentic AI & Closed-loop Discovery, Uncertainty Quantification, Molecular Representation Learning, Explainable/Interpretable AI"
 
     Certificates:
       - name: Machine Learning

@@ -1,12 +1,14 @@
 ---
 layout: page
 title: CUE
-description: "CUE: A Chemical Uncertainty-Aware Embedding Framework for Multi-modal Drug Selectivity Prediction"
+description: "CUE: A Chemical Uncertainty-Aware Embedding Framework for Multimodal Drug Selectivity Prediction"
 img: assets/project/CUE/overview_thumb.png
 importance: 1
 categories: [Research]
 related_publications: false
 links:
+  - label: Paper
+    url: https://pubs.acs.org/doi/10.1021/acs.jcim.6c01761
   - label: Code
     url: https://github.com/jjjabcd/CUE
 tags:
@@ -22,6 +24,7 @@ toc:
 
 <div class="projects">
 <div class="project-tags project-tags-links">
+<a href="https://pubs.acs.org/doi/10.1021/acs.jcim.6c01761" class="tag" target="_blank" rel="noopener"><i class="fa-solid fa-file-lines"></i> Paper</a>
 <a href="https://github.com/jjjabcd/CUE" class="tag" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> Code</a>
 </div>
 </div>
@@ -59,10 +62,10 @@ Drug selectivity, a compound's ability to bind its intended target while minimiz
 ## BibTeX
 
 ```
-@article{kim2026cue,
-  title={CUE: A Chemical Uncertainty-Aware Embedding Framework for Multi-modal Drug Selectivity Prediction},
+@article{kimcue,
+  title={CUE: A Chemical Uncertainty-Aware Embedding Framework for Multimodal Drug Selectivity Prediction},
   author={Kim, Jin Hyuk and Kim, Gyeong Hwan and Park, Hyeon Jun and Choi, Jonghwan},
-  year={2026},
-  note={Under review}
+  journal={Journal of Chemical Information and Modeling},
+  publisher={ACS Publications}
 }
 ```

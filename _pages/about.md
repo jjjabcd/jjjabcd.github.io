@@ -35,15 +35,12 @@ I am a member of the [AI-Powered Cheminformatics Laboratory](https://sites.googl
 My current research focuses on Agentic AI for molecular generation and multi-objective molecular optimization. In particular, I study how specialized molecular models can be dynamically selected and coordinated to solve complex molecular design problems.
 
 My broader research interests include:
-- AI4Science
-  - Chemistry
-  - Drug Discovery
-- Agentic AI for Molecular Design
-  - Synthesizable Molecular Generation
-  - Multi-Objective Molecular Optimization
-  - Planning and Routing
+- AI4Science (Chemistry, Drug Discovery & Biology)
+- Molecular Generation & Optimization
+- Agentic AI & Closed-loop Discovery
+- Uncertainty Quantification
 - Molecular Representation Learning
-  - Multi-modal Fusion
+  - Multimodal Fusion
   - Adaptive Fusion
 - Explainable/Interpretable AI
 
