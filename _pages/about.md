@@ -32,12 +32,14 @@ Hi, I’m Jin Hyuk Kim, an M.S. student in Computer Engineering at Hallym Univer
 
 I am a member of the [AI-Powered Cheminformatics Laboratory](https://sites.google.com/view/hallym-apclab/home?authuser=0), where I develop artificial intelligence approaches for drug discovery.
 
-My current research focuses on Agentic AI for molecular generation and multi-objective molecular optimization. In particular, I study how specialized molecular models can be dynamically selected and coordinated to solve complex molecular design problems.
+My current research focuses on multimodal fusion for accurate molecular property prediction and quantitative structure-activity relationship (QSAR) modeling. In particular, I study how complementary molecular representations can be effectively integrated, taking into account the reliability of each modality.
 
 My broader research interests include:
 - AI4Science (Chemistry, Drug Discovery & Biology)
 - Molecular Generation & Optimization
-- Agentic AI & Closed-loop Discovery
+- Agentic AI for Scientific Discovery
+- Self-driving Laboratories
+- Synthesis Planning (Retrosynthesis & Forward Synthesis Prediction)
 - Uncertainty Quantification
 - Molecular Representation Learning
   - Multimodal Fusion
